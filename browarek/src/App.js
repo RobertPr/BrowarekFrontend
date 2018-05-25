@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch, withRouter, Router } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import Login from './components/login/Login';
 
 class App extends Component {
