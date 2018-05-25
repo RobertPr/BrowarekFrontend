@@ -5,9 +5,7 @@ import Login from './components/login/Login';
 class App extends Component {
   render() {
     return (
-      
       <Route exact path="/login" component={Login} />
-
     );
   }
 }
