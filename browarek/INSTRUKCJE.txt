@@ -1,4 +1,6 @@
-﻿pododawac navbary to ekranów
+﻿dorobic ekran głowny
+
+pododawac navbary to ekranów
 
 index.js ustawic defaults axiosa
 navbar to lepiej dac w oddzielnym komponencie

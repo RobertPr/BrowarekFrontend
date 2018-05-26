@@ -8,6 +8,7 @@
 	border-width: 3px;
 	display: flex;
 	flex-direction: row;
+	margin: 5px;
 }
 
 .fa-beer {    
