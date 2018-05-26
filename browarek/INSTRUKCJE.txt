@@ -9,7 +9,7 @@ zrob 2 komponenty i daj w ich cssach tak samo nazwane klasy
 i sprawdz w dev toolsach czy beda obie i jedna skreslona
 
 dodac komentarze do ekranu karta piwa
-pozmieniac kolory na brązowe
+kolory juz prawie ok, gdzie niegdzie zostały zbyt białe ale to mało ważne
 
 zrobic plik ze stylami piwa
 lista na sztywno w pliku

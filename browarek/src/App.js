@@ -11,7 +11,7 @@ import BrewerySearch from './components/brewerySearch/BrewerySearch';
 import BeerResults from './components/beerResults/BeerResults';
 import BreweryResults from './components/breweryResults/BreweryResults';
 import NavbarLogged from './components/navbarLogged/NavbarLogged';
-import NavbarUnLogged from './components/navbarUnlogged/NavbarUnlogged';
+import NavbarUnLogged from './components/navbarUnlogged/NavbarUnLogged';
 
 class App extends Component {
   render() {
