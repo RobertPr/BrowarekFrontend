@@ -7,6 +7,7 @@ import AddBrewery from './components/addBrewery/AddBrewery';
 import BreweryCard from './components/breweryCard/BreweryCard';
 import BeerCard from './components/beerCard/BeerCard';
 import BeerSearch from './components/beerSearch/BeerSearch';
+import BrewerySearch from './components/brewerySearch/BrewerySearch';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
       <Route exact path="/breweryCard" component={BreweryCard} /> {/* zmienic zeby bylo id browaru */}
       <Route exact path="/beerCard" component={BeerCard}/> {/* zmienic zeby bylo id piwa */}
       <Route exact path="/beerSearch" component={BeerSearch}/>
+      <Route exact path="/brewerySearch" component={BrewerySearch}/>
       </Switch>
     );
   }

@@ -1,0 +1,144 @@
+#searchContainer{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+#searchLogo{
+	font-family: Mitr; 
+	font-size: 60px; 
+	color: white;
+	text-shadow: 1px 1px 3px black;
+}
+
+#searchSwitch{
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+}
+
+#beerSwitchBrewery{
+		width: 120px;
+	height: 50px;
+	background: #9095a0;
+  color: #d1d1d1;
+  border-radius: 3px;
+ 	border-style: inset;
+  font-size: 22px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+	text-shadow: 0px 0px 0.5px black;
+	margin-left: -6px;
+	
+}
+
+#brewerySwitchBrewery{
+	margin-left: -3px;
+	width: 130px;
+	height: 50px;
+	background: #FFA090;
+  color: #FFF6E4;
+  border-radius: 3px;
+  border-style: outset;
+	border-width: 4px;
+  font-size: 22px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  box-shadow: -4px 0px 3px 2px rgba(0, 0, 0, 0.1);
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+	text-shadow: 0px 0px 0.5px black;
+	z-index:1;
+	border-color: #FFA090;
+}
+
+#searchName{
+	margin-top: 30px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	border-style: outset;
+	width: 340px;
+  font-size: 20px;
+  text-align: center;
+  color: #858383;
+  padding: 12px;
+  margin-bottom: 30px;
+  border-radius: 3px;
+  border-width: 1px;
+	border-style: inset;
+  box-shadow: 0px 3px 10px 3px rgba(122, 122, 122, 0.18);
+}
+
+#twoColumns{
+	display: flex;
+	width:400px;
+}
+
+#FilterDesc{
+	margin-right: 65px;
+}
+
+#searchForm{
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	margin-top:3px;
+}
+
+#clearFilters{
+	background:none;
+  border:none;
+  margin:0;
+  padding:0;
+	margin-bottom: 20px;
+	color: #7a8089;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+#Desc{
+	margin-bottom: 20px;
+}
+
+.comboboxBrewery{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+#searchButton{
+	margin-top: 60px;
+  background: #FFA090;
+  color: #FFF6E4;
+  border-radius: 3px;
+  border: 0px;
+  font-size: 22px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  box-shadow: 3px 3px 1px 0.5px rgba(0, 0, 0, 0.1);
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+	text-shadow: 0px 0px 0.5px black;
+}
+
+#searchButton:active {
+  transform: translate(0px, 1px);
+}
+
+#rangeSliderBrewery{
+	margin-top: 3px;
+}
