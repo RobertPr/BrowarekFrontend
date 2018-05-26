@@ -5,6 +5,7 @@ import Register from './components/register/Register';
 import AddBeer from './components/addBeer/AddBeer';
 import AddBrewery from './components/addBrewery/AddBrewery';
 import BreweryCard from './components/breweryCard/BreweryCard';
+import BeerCard from './components/beerCard/BeerCard';
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
       <Route exact path="/addBeer" component={AddBeer} />
       <Route exact path="/addBrewery" component={AddBrewery} />
       <Route exact path="/breweryCard" component={BreweryCard} /> {/* zmienic zeby bylo id browaru */}
+      <Route exact path="/beerCard" component={BeerCard}/> {/* zmienic zeby bylo id piwa */}
       </Switch>
     );
   }
