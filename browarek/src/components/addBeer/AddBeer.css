@@ -1,4 +1,3 @@
-
 #addBreweryContainer{
 	display: flex;
 	text-align: right;
@@ -110,7 +109,7 @@ i potem wielkie zdziwienie ze po prawej napisale prosze n
     padding: 20px;
     margin: 0;
     position: relative;
-    width: 3.1em;
+    /*width: 3.1em;*/
     cursor: pointer;
     color: #000;
 	

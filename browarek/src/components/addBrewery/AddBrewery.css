@@ -1,0 +1,145 @@
+#addBreweryContainer{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+#addBreweryTitle{
+	font-family: Mitr; 
+	font-size: 60px; 
+	color: white;
+	text-shadow: 1px 1px 3px black;
+}
+
+#searchSwitchBrewery{
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+}
+
+#beerSwitchBrewery{
+		width: 120px;
+	height: 50px;
+	background: #9095a0;
+  color: #d1d1d1;
+  border-radius: 3px;
+ 	border-style: inset;
+	border-color: none;
+  font-size: 22px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+	text-shadow: 0px 0px 0.5px black;
+	margin-left: -6px;
+	
+}
+
+#brewerySwitchBrewery{
+	margin-left: -3px;
+	width: 130px;
+	height: 50px;
+	background: #FFA090;
+  	color: #FFF6E4;
+ 	 border-radius: 3px;
+  	border-style: outset;
+	border-width: 4px;
+  	font-size: 22px;
+  	font-weight: bold;
+  	padding-top: 5px;
+  	padding-bottom: 5px;
+  	padding-right: 20px;
+  	padding-left: 20px;
+  	box-shadow: -4px 0px 3px 2px rgba(0, 0, 0, 0.1);
+  	outline: none;
+  	cursor: pointer;
+  	text-decoration: none;
+	text-shadow: 0px 0px 0.5px black;
+	z-index:1;
+	border-color: #FFA090;
+	margin-bottom: 1px;
+}
+
+#inputsContainer{
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	margin-top: 60px;
+	margin-left: 50px;
+}
+
+.inputsTitles{
+	margin-bottom: 45px;
+	font-size: 30px;
+	color: #3a3a3a;
+}
+
+#Inputs{
+	margin-top: -15px;
+	margin-left: 90px;
+}
+
+.addBreweryInputBrewery{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	border-style: outset;
+	width: 340px;
+  font-size: 20px;
+  text-align: center;
+  color: #858383;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 3px;
+  border-width: 1px;
+	border-style: inset;
+  box-shadow: 0px 3px 10px 3px rgba(122, 122, 122, 0.18);
+}
+
+#addButtonBrewery{
+	margin-top: 60px;
+	margin-right: 25px;
+  background: #FFA090;
+  color: #FFF6E4;
+  border-radius: 3px;
+  border: 0px;
+  font-size: 22px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  box-shadow: 3px 3px 1px 0.5px rgba(0, 0, 0, 0.1);
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+	text-shadow: 0px 0px 0.5px black;
+}
+
+#searchButton:active {
+  transform: translate(0px, 1px);
+}
+
+#addBreweryPhoto{
+	align-self: flex-end;
+}
+
+#addBreweryPhotoBrewery{ 
+	border-radius: 5px;
+	margin-top: 100px;
+	background-image: url("http://catawbabrewing.com/wp-content/themes/catawba/images/placeholder.png");
+	width: 20%;
+	height: 320px;
+	background-size:cover;
+	box-shadow: 0px 0px 4px 0.1px black;
+	position: absolute;
+	right: 100px;
+}
+
+#addImgDescBrewery{
+	margin-left: 25%;
+}
