@@ -1,17 +1,15 @@
-﻿ma prosto wyglądac
-componenty w folderze components po jednym na ekran
-cssy oddzielnie dla kazdego komponentu
-w kazdym komponencie import './nazwaKomponentu.css'
+﻿pododawac navbary to ekranów
 
 index.js ustawic defaults axiosa
 navbar to lepiej dac w oddzielnym komponencie
-zrob 2 komponenty i daj w ich cssach tak samo nazwane klasy
-i sprawdz w dev toolsach czy beda obie i jedna skreslona
+
 
 dodac komentarze do ekranu karta piwa
 kolory juz prawie ok, gdzie niegdzie zostały zbyt białe ale to mało ważne
 
 zrobic plik ze stylami piwa
+
+
 lista na sztywno w pliku
 i select
 tak jak https://github.com/kpietraszko/AvocoFrontend/blob/master/avoco/src/services/regions.js
