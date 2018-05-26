@@ -1,4 +1,4 @@
-ma prosto wyglądac
+﻿ma prosto wyglądac
 componenty w folderze components po jednym na ekran
 cssy oddzielnie dla kazdego komponentu
 w kazdym komponencie import './nazwaKomponentu.css'
@@ -7,3 +7,6 @@ index.js ustawic defaults axiosa
 navbar to lepiej dac w oddzielnym komponencie
 zrob 2 komponenty i daj w ich cssach tak samo nazwane klasy
 i sprawdz w dev toolsach czy beda obie i jedna skreslona
+
+dodac komentarze do ekranu karta piwa
+pozmieniac kolory na brązowe
