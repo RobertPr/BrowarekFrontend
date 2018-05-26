@@ -20,8 +20,8 @@
 #beerSwitch{
 	width: 120px;
 	height: 50px;
-	background: #FFA090;
-  color: #FFF6E4;
+	background: #7A5F49;
+  color: #FFEDE0;
   border-radius: 3px;
   border-style: outset;
 	border-width: 4px;
@@ -37,7 +37,7 @@
   text-decoration: none;
 	text-shadow: 0px 0px 0.5px black;
 	z-index:1;
-	border-color: #FFA090;
+	border-color: #87705E;
 }
 
 #brewerySwitch{
@@ -124,8 +124,8 @@
 
 #searchButton{
 	margin-top: 60px;
-  background: #FFA090;
-  color: #FFF6E4;
+  background: #7A5F49;
+  color: #FFEDE0;
   border-radius: 3px;
   border: 0px;
   font-size: 22px;

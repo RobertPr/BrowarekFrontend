@@ -1,10 +1,10 @@
 #navbarUnlogged {
-	background: #FFA090;
+	background: #7A5F49;
 	width: auto;
 	height: 100px; 
 	border-radius: 15px;
 	border-style: groove;
-	border-color: #FFA090;
+	border-color: #87705E;
 	border-width: 3px;
 	display: flex;
 	flex-direction: row;
@@ -14,7 +14,7 @@
 	font-size: 80px !important ; /* zmienic important */
 	margin-left: 20px;
 	margin-top: 8px;
-	color: #FFF6E4;
+	color: #FFEDE0;
 	text-shadow: 2px 2px 6px black;
 }  
 
@@ -23,7 +23,7 @@
 	font-size: 85px;
 	margin-left: 20px;
 	font-weight: bold; 
-	color: #FFF6E4;
+	color: #FFEDE0;
 	text-shadow: 2px 2px 6px black;
 	margin-top: -3px;
 }
