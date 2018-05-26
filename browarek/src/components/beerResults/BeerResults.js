@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import './BeerResults.css';
+import NavbarLogged from '../navbarLogged/NavbarLogged';
 
 class BeerResults extends React.Component {
 	constructor(props) {
@@ -37,7 +38,7 @@ class BeerResults extends React.Component {
 						</li>
 					</ul>
 				</div>
-			</div >
+			</div>
 		);
 	}
 }

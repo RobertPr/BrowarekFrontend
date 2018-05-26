@@ -1,0 +1,115 @@
+#navbarLogged {
+	background: #FFA090;
+	width: auto;
+	height: 100px; 
+	border-radius: 15px;
+	border-style: groove;
+	border-color: #FFA090;
+	border-width: 3px;
+	display: flex;
+	flex-direction: row;
+}
+
+.fa-beer {    
+	font-size: 80px !important ; /* zmienic important */
+	margin-left: 20px;
+	margin-top: 8px;
+	color: #FFF6E4;
+	text-shadow: 2px 2px 6px black;
+}  
+
+#logoText{
+	font-family: Berkshire Swash; 
+	font-size: 85px;
+	margin-left: 20px;
+	font-weight: bold; 
+	color: #FFF6E4;
+	text-shadow: 2px 2px 6px black;
+	margin-top: -3px;
+}
+
+#navbarButtonsContainer{
+	display: flex;
+	flex-direction: row;
+	width: 45%;
+	margin-left: 70px;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+
+.navbarButton{
+	display:flex;
+	background-color: #FFFDE5;
+	width:28%;
+	height: 50%;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
+	align-items: center;
+	justify-content: center;
+	border-style: solid;
+	border-color: #3a3a3a;
+	border-width: 0.5px;
+	border-bottom: none;
+	box-shadow: 0px 0px 1px 0.1px black;
+}
+
+#navbarButtonText{
+	font-size: 28px;
+	font-family: Mitr;
+	color: #3a3a3a;
+}
+
+.fa-search, .fa-user-plus, .fa-sign-in-alt, .fa-plus-square {
+	font-size: 25px !important ; /* zmienic important */
+	padding-right: 5px;
+	padding-top: 1px;
+	color: #3a3a3a;
+	text-shadow: 0px 0px 0.2px black;
+}
+
+/* .fa-sign-in-alt{
+	font-size: 29px !important;
+} */
+
+.fa-plus-square{
+	padding-right: 8px;
+	font-size: 28px !important;
+}
+
+#userAndLogout{
+	display: flex;
+	height: 100%;
+	width: 24%;
+	margin-left: 20px;
+	justify-content: flex-end;
+}
+
+#logoutButton{
+	 	background-color: #FFBF8B; 
+    border-color: #3a3a3a;
+		color: #3a3a3a;
+	  border-width: 0.5px;
+	  border-radius: 6px;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		margin-left: -5px;
+    padding: 0px 35px;
+    text-align: center;
+		font-family: Mitr;
+    font-size: 18px;
+}
+
+#user{
+		background-color: white; 
+		border-style: solid;
+    border-color: #3a3a3a;
+	  border-width: 0.5px;
+		color: #3a3a3a;
+	  border-top-left-radius: 6px;
+  	border-bottom-left-radius: 6px;
+		margin-top: 30px;
+		margin-bottom: 30px;
+    padding: 5px 60px;
+		font-family: Mitr;
+    font-size: 18px;
+}

@@ -10,3 +10,8 @@ i sprawdz w dev toolsach czy beda obie i jedna skreslona
 
 dodac komentarze do ekranu karta piwa
 pozmieniac kolory na brązowe
+
+zrobic plik ze stylami piwa
+lista na sztywno w pliku
+i select
+tak jak https://github.com/kpietraszko/AvocoFrontend/blob/master/avoco/src/services/regions.js

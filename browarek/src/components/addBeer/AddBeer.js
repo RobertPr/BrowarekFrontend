@@ -20,8 +20,8 @@ class AddBeer extends React.Component {
                 <div id="addBreweryContainer">
                     <div id="addBreweryTitle">Dodaj</div>
                     <div id="searchSwitch">
-                        <button id="beerSwitch">Piwo</button>
-                        <button id="brewerySwitch">Browar</button>
+                        <button id="brewerySwitch">Piwo</button>
+                        <button id="beerSwitch">Browar</button>
                     </div>
                     <form id="beerForm">
                         <div>

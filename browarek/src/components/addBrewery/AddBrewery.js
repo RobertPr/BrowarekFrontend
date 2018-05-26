@@ -17,8 +17,8 @@ class AddBrewery extends React.Component {
                         <span id="addImgDescBrewery">Kliknij, aby dodać zdjęcie</span>
                     </div>
                     <div id="searchSwitchBrewery">
-                        <button id="beerSwitchBrewery">Piwo</button>
-                        <button id="brewerySwitchBrewery">Browaro</button>
+                        <button id="brewerySwitchBrewery">Piwo</button>
+                        <button id="beerSwitchBrewery">Browar</button>
                     </div>
                     <div id="inputsContainer">
                         <div id="inputTitlesBox">
