@@ -49,9 +49,11 @@ class BrewerySearch extends React.Component {
                         </div>
                         <div id="searchForm">
                             <select className="comboboxBrewery" name="producerType">
+                                <option hidden value="" />
                                 {breweryTypes.map((type, i) =>
                                     <option key={i} value={i}>{type}</option>)}</select>
                             <select className="comboboxBrewery" name="Country">
+                                <option hidden value="" />
                                 {countries.map((country, i) =>
                                     <option key={i} value={i}>{country.name_pl}</option>)}
                             </select>
