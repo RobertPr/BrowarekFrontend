@@ -2,16 +2,17 @@ import React from 'react';
 import './Login.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { withRouter } from "react-router-dom";
+
 
 class Login extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = { error: "" };
-	}
+	state = { error: "" };
+
 	handleSubmit = (event) => {
 		event.preventDefault();
+		console.log(this.props.history.push);
 		const form = event.target;
-		axios.post('/login', { Email: form.email.value, Password: form.password.value})
+		axios.post('/authentication/login', { Email: form.email.value, Password: form.password.value})
 			.then((response) => {
 				const token = response.data.token;
 				const userId = response.data.userId;
@@ -46,4 +47,4 @@ class Login extends React.Component {
 });
 export default connect(null, mapDispatchToProps)(Login); */
 
-export default Login;
+export default withRouter(Login);

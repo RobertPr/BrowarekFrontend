@@ -6,7 +6,7 @@ import axios from 'axios';
 class MainScreen extends React.Component {
 	state = {};
 	componentDidMount = () => {
-		axios.get('/beer')
+		axios.get('/beer', )
 			.then(response => console.log(response.data))
 			.catch(error => console.log(error));
 	}
@@ -42,7 +42,7 @@ class MainScreen extends React.Component {
 									</li>
 									<li className="beerRectangleMS"><a href=""></a>
 											<div className="beerImgContainerMS"></div>
-											<div iclassName="beerNameMS">Żywiec białe</div>
+											<div className="beerNameMS">Żywiec białe</div>
 									</li>
 								</ul>
 						</div>
