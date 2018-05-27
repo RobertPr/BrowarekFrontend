@@ -46,7 +46,7 @@ class AddBeer extends React.Component {
             <React.Fragment>
                 <div className="addBeerPhoto" >
                     <label htmlFor="photoInput" className="addImgDesc">Kliknij, aby dodać zdjęcie piwa</label>
-                    <input name="photoInput" type="file" onChange={this.handleImageUpload}/>
+                    <input id="imgUpload" name="photoInput" type="file" onChange={this.handleImageUpload}/>
                 </div>
                 <div id="addBreweryContainer">
                     <div id="addBreweryTitle">Dodaj</div>
@@ -107,7 +107,7 @@ class AddBeer extends React.Component {
                                     <option key={brewery.id} value={brewery.id}>{brewery.name}</option>)}
                             </select>
                         </div>
-                        <input name="addButton" type="submit" value="Dodaj" />
+                        <input id="addButton" name="addButton" type="submit" value="Dodaj" />
                     </form>
                 </div>
             </React.Fragment>
