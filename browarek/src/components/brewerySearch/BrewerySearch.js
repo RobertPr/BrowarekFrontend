@@ -40,7 +40,7 @@ class BrewerySearch extends React.Component {
                     <button id="beerSwitchBrewery">Browary</button>
                 </div>
                 <form id="brewerySearchFrom" onSubmit={this.onSubmit}>
-                    <input name="Name" id="searchName" form="searchForm" placeholder="Wpisz nazwe browaru" />
+                    <input name="Name" id="searchName" placeholder="Wpisz nazwe browaru" />
                     <div id="twoColumns">
                         <div id="FilterDesc">
                             <div className="Desc">Typ producenta:</div>
@@ -63,7 +63,7 @@ class BrewerySearch extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <input name="searchButtonName" id="searchButton" form="searchForm" type="submit" value="Wyszukaj" />
+                    <input name="searchButtonName" id="searchButton" type="submit" value="Wyszukaj" />
                 </form>
             </div>
         );
