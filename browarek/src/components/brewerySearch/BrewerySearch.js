@@ -32,7 +32,10 @@ class BrewerySearch extends React.Component {
                         <br></br>
                         <select className="comboboxBrewery" name="producerType"></select>
                         <select className="comboboxBrewery" name="Country"></select>
-                        <input id="rangeSliderBrewery" className="rangeSlider" type="range" multiple value="10,80" />
+                        <div id="creationDateInput">
+                        <input id="creationDateFrom" placeholder="od"/>
+                        <input id="creationDateTo" placeholder="do"/>
+                        </div>
                     </form>
                 </div>
                 <input id="searchButton" form="searchForm" type="submit" value="Wyszukaj" />

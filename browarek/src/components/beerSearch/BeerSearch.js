@@ -29,7 +29,7 @@ class BeerSearch extends React.Component {
                        <div id="Desc">Typ producenta:</div> */}
                         <div className="Desc">Obj. alkoholu w %:</div>
                         <div className="Desc">Gorzkość w IBU:</div>
-                        <div className="Desc">Ocena użytkowników:</div>
+                        {/* <div className="Desc">Ocena użytkowników:</div> */}
                         <div className="Desc">Ekstrakt w °Blg:</div>
                     </div>
                     <form id="searchForm">
@@ -39,10 +39,18 @@ class BeerSearch extends React.Component {
                         {/* <select className="combobox" name="Country"></select>
                         <select className="combobox" name="Producer"></select>
                          <select className="combobox" name="producerType"></select> */}
-                        <input className="rangeSlider" type="range" multiple value="10,80" />
-                        <input className="rangeSlider" type="range" multiple value="10,80" />
-                        <input id="range3" className="rangeSlider" type="range" multiple value="10,80" /> 
-                        <input className="rangeSlider" type="range" multiple value="10,80" />
+                        <div id="alcoPercentInput" className="ToFromContainer">
+                        <input id="alcoPercentFrom" className="ToFrom" placeholder="od"/>
+                        <input id="alcoPercentTo" className="ToFrom" placeholder="do"/>
+                        </div>
+                        <div id="gorzkoscInput" className="ToFromContainer">
+                        <input id="gorzkoscFrom" className="ToFrom" placeholder="od"/>
+                        <input id="gorzkoscTo" className="ToFrom" placeholder="do"/>
+                        </div>
+                        <div id="blgInput" className="ToFromContainer">
+                        <input id="blgFrom" className="ToFrom" placeholder="od"/>
+                        <input id="blgTo" className="ToFrom" placeholder="do"/>
+                        </div>
                     </form>
                 </div>
                 <input id="searchButton" form="searchForm" type="submit" value="Wyszukaj" />

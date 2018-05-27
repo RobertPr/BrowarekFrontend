@@ -100,7 +100,7 @@
   margin:0;
   padding:0;
 	margin-bottom: 20px;
-	color: #7a8089;
+	color: #302e2c;
 	cursor: pointer;
 	text-decoration: underline;
 }
@@ -144,4 +144,27 @@
 
 #searchButton:active {
   transform: translate(0px, 1px);
+}
+
+.ToFromContainer{
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  margin-top: 4px;
+  margin-bottom: 28px;
+}
+
+.ToFrom{
+  width: 60px;
+	align-items: center;
+	border-style: outset;
+  font-size: 14px;
+  text-align: center;
+  color: #858383;
+  padding: 5px;
+  border-radius: 3px;
+  border-width: 1px;
+	border-style: inset;
+  box-shadow: 0px 3px 10px 3px rgba(122, 122, 122, 0.18);
+  margin-right: 60px;
 }
