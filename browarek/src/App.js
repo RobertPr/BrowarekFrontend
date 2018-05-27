@@ -29,10 +29,10 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        {this.state.token ? <NavbarLogged userId={this.state.userId}/> : <NavbarUnLogged /> }
+        {this.state.token ? <NavbarLogged userId={this.state.userId} onLogOut={this.onLogOut}/> : <NavbarUnLogged /> }
         <Switch>
           <Route exact path="/" component={() => <MainScreen token={this.state.token} />} />
-          <Route exact path="/login" render={() => <Login onLogin={this.onLogin} onLogOut={this.onLogOut} />} /> {/* niestety chyba tak trzeba zeby propsy przekazac :/  */}
+          <Route exact path="/login" render={() => <Login onLogin={this.onLogin}/>} /> {/* niestety chyba tak trzeba zeby propsy przekazac :/  */}
           <Route exact path="/register" component={Register} />
           <Route exact path="/addBeer" component={AddBeer} />
           <Route exact path="/addBrewery" component={AddBrewery} />
