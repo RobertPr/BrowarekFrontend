@@ -2,11 +2,12 @@ import React from 'react';
 import './BrewerySearch.css';
 import { Link, Redirect, withRouter } from 'react-router-dom';
 import axios from 'axios';
-import BreweryResults from '../breweryResults/BreweryResults';
+import breweryTypes from '../../data/breweryTypes';
+import countries from '../../data/countries';
 
 
 class BrewerySearch extends React.Component {
-    state = { error: ""}
+    state = { error: "" }
 
     onSubmit = (event) => {
         event.preventDefault();
@@ -21,11 +22,11 @@ class BrewerySearch extends React.Component {
         }
 
         axios.post("/brewery/search", data)
-            .then(response => { 
+            .then(response => {
                 this.props.setSearchResults(response.data);
                 this.props.history.push("/breweryResults");
             })
-            .catch (error => alert(error));
+            .catch(error => alert(error));
     }
 
     render = () => {
@@ -34,28 +35,33 @@ class BrewerySearch extends React.Component {
                 <div id="searchLogo">Wyszukaj:</div>
                 <div id="searchSwitch">
                     <Link to="/beerSearch">
-                    <button id="brewerySwitchBrewery">Piwa</button>
+                        <button id="brewerySwitchBrewery">Piwa</button>
                     </Link>
                     <button id="beerSwitchBrewery">Browary</button>
                 </div>
                 <form id="brewerySearchFrom" onSubmit={this.onSubmit}>
-                <input name="Name" id="searchName" form="searchForm" placeholder="Wpisz nazwe browaru" />
-                <div id="twoColumns">
-                    <div id="FilterDesc">
-                        <div className="Desc">Typ producenta:</div>
-                        <div className="Desc">Kraj:</div>
-                        <div className="Desc">Rok założenia:</div>
-                    </div>
-                    <div id="searchForm">
-                        <select className="comboboxBrewery" name="producerType"></select>
-                        <select className="comboboxBrewery" name="Country"></select>
-                        <div id="creationDateInput">
-                        <input name="creationDateFromName" id="creationDateFrom" placeholder="od"/>
-                        <input name="creationDateToName" id="creationDateTo" placeholder="do"/>
+                    <input name="Name" id="searchName" form="searchForm" placeholder="Wpisz nazwe browaru" />
+                    <div id="twoColumns">
+                        <div id="FilterDesc">
+                            <div className="Desc">Typ producenta:</div>
+                            <div className="Desc">Kraj:</div>
+                            <div className="Desc">Rok założenia:</div>
+                        </div>
+                        <div id="searchForm">
+                            <select className="comboboxBrewery" name="producerType">
+                                {breweryTypes.map((type, i) =>
+                                    <option key={i} value={i}>{type}</option>)}</select>
+                            <select className="comboboxBrewery" name="Country">
+                                {countries.map((country, i) =>
+                                    <option key={i} value={i}>{country.name_pl}</option>)}
+                            </select>
+                            <div id="creationDateInput">
+                                <input name="creationDateFromName" id="creationDateFrom" placeholder="od" />
+                                <input name="creationDateToName" id="creationDateTo" placeholder="do" />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <input name="searchButtonName" id="searchButton" form="searchForm" type="submit" value="Wyszukaj" />
+                    <input name="searchButtonName" id="searchButton" form="searchForm" type="submit" value="Wyszukaj" />
                 </form>
             </div>
         );
