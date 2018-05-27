@@ -20,8 +20,11 @@ class BrewerySearch extends React.Component {
         }
 
         axios.post("/brewery/search", data)
-        .then(response => this.setState({results: response.data}))
-        .catch(error => alert(error));
+            .then(response => { 
+                this.props.setSearchResults(response.data);
+                this.props.history.push("/breweryResults");
+            })
+            .catch (error => alert(error));
     }
 
     render = () => {

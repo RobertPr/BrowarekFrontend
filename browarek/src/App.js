@@ -44,7 +44,8 @@ class App extends Component {
           <Route exact path="/beerCard/:beerId" component={BeerCard} /> {/* zmienic zeby bylo id piwa */}
           <Route exact path="/beerSearch" render={() => <BeerSearch setSearchResults={this.setSearchResults}/>} />
           <Route exact path="/beerResults" render={() => <BeerResults results={this.state.results} />} />
-          <Route exact path="/brewerySearch" component={BrewerySearch} />
+          <Route exact path="/brewerySearch" render={() => <BrewerySearch setSearchResults={this.setSearchResults}/>} />
+          <Route exact path="/breweryResults" render={() => <BreweryResults results={this.state.results} />} />
           <Route exact path="/nav" component={NavbarLogged} /> {/* test only */}
           <Route exact path="/navun" component={NavbarUnLogged} /> {/* test only */}
         </Switch>
