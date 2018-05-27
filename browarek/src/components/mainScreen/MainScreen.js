@@ -1,12 +1,15 @@
 import React from 'react';
 import './MainScreen.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 class MainScreen extends React.Component {
-    constructor() {
-        super();
-        this.state = {};
-    }
+	state = {};
+	componentDidMount = () => {
+		axios.get('/beer')
+			.then(response => console.log(response.data))
+			.catch(error => console.log(error));
+	}
 
     render = () => {
         return (
