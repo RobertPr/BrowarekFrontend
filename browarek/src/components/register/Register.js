@@ -42,16 +42,16 @@ class Register extends React.Component {
 					<h1 id="logowanie">Rejestracja</h1>
 				</div>
 				<form id="loginForm" onSubmit={this.handleSubmit}>
-					<input className="form" name="FirstName" placeholder="Nazwa użytkownika" />
-					<input className="form" name="LastName" placeholder="Nazwa użytkownika" />
-					<select defaultValue={2018} className="form" name="BirthDate" placeholder="Rok urodzenia" onInput={this.handleBirthDate}>
+					<input className="form" name="FirstName" placeholder="Imię" required minLength={3}/>
+					<input className="form" name="LastName" placeholder="Nazwisko" required minLength={3}/>
+					<select defaultValue={2018} className="form" name="BirthDate" placeholder="Rok urodzenia" onInput={this.handleBirthDate} required>
 						{[...Array(100).keys()].map(value =>
 							<option key={value + 1918} value={value + 1918}>
 								{value + 1918}
 							</option>)}
 					</select>
-					<input className="form" name="Email" placeholder="E-mail" />
-					<input className="form" type="password" name="Password" placeholder="Hasło" />
+					<input className="form" name="Email" placeholder="E-mail" type="email" required/>
+					<input className="form" type="password" name="Password" placeholder="Hasło" required minLength={6}/>
 					<input className="form" type="password" name="PasswordVerify" placeholder="Powtórz hasło" onInput={this.handleRepPassword} />
 					<input id="loginButton" type="submit" value="Załóż konto" />
 				</form>
