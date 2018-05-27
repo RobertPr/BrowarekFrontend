@@ -3,6 +3,7 @@ import './BeerSearch.css';
 import { Link, Redirect, withRouter } from 'react-router-dom';
 import axios from 'axios';
 import BeerResults from '../beerResults/BeerResults';
+import beerTypes from '../../data/beerTypes';
 
 class BeerSearch extends React.Component {
     state = { error: "" }
@@ -23,11 +24,11 @@ class BeerSearch extends React.Component {
         }
 
         axios.post("/beer/search", data)
-            .then(response => { 
+            .then(response => {
                 this.props.setSearchResults(response.data);
                 this.props.history.push("/beerResults");
             })
-            .catch (error => alert(error));
+            .catch(error => alert(error));
     }
 
     render = () => {
@@ -56,7 +57,11 @@ class BeerSearch extends React.Component {
                     <form id="searchForm" onSubmit={this.onSubmit}>
                         <input name="Name" />
                         <br></br>
-                        <select className="combobox" name="style"></select>
+                        <select className="combobox" name="style">
+                            <option hidden value=""></option>
+                            {beerTypes.map((type, i) =>
+                                <option key={i} value={i}>{type}</option>)}
+                        </select>
                         {/* <select className="combobox" name="Country"></select>
                         <select className="combobox" name="Producer"></select>
                          <select className="combobox" name="producerType"></select> */}
