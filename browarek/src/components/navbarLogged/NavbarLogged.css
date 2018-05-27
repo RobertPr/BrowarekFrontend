@@ -55,7 +55,7 @@
 	box-shadow: 0px 0px 1px 0.1px black;
 }
 
-#navbarButtonText{
+.navbarButtonText{
 	font-size: 22px;
 	font-family: Mitr;
 	color: #3a3a3a;

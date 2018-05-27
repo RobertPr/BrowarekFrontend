@@ -1,17 +1,6 @@
-﻿dorobic ekran głowny
-
-pododawac navbary to ekranów
-
-index.js ustawic defaults axiosa
-navbar to lepiej dac w oddzielnym komponencie
-
-
-dodac komentarze do ekranu karta piwa
-kolory juz prawie ok, gdzie niegdzie zostały zbyt białe ale to mało ważne
+﻿index.js ustawic defaults axiosa
 
 zrobic plik ze stylami piwa
-
-
 lista na sztywno w pliku
 i select
 tak jak https://github.com/kpietraszko/AvocoFrontend/blob/master/avoco/src/services/regions.js

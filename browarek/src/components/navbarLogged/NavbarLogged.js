@@ -16,11 +16,11 @@ class NavbarLogged extends React.Component {
                 <div id="navbarButtonsContainer">
                     <div className="navbarButton">
                         <span className="fas fa-search"></span>
-                        <span id="navbarButtonText">Wyszukiwarka</span>
+                        <span className="navbarButtonText">Wyszukiwarka</span>
                     </div>
                     <div className="navbarButton">
                         <span className="fas fa-plus-square"></span>
-                        <span id="navbarButtonText">Dodaj</span>
+                        <span className="navbarButtonText">Dodaj</span>
                     </div>
                 </div>
                 <div id="userAndLogout">

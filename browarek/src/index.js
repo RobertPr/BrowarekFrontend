@@ -6,6 +6,8 @@ import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import axios from 'axios';
 
+axios.defaults.baseURL = "http://localhost:5000/api"
+
 ReactDOM.render(
     <BrowserRouter>
         <App />

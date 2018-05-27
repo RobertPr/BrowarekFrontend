@@ -16,15 +16,15 @@ class NavbarUnLogged extends React.Component {
                 <div id="navbarButtonsContainer">
                     <div className="navbarButton">
                         <span className="fas fa-sign-in-alt"></span>
-                        <span id="loginButtonText">Logowanie</span>
+                        <span className="loginButtonText">Logowanie</span>
                     </div>
                     <div className="navbarButton">
                         <span className="fas fa-user-plus"></span>
-                        <span id="loginButtonText">Rejestracja</span>
+                        <span className="loginButtonText">Rejestracja</span>
                     </div>
                     <div className="navbarButton">
                         <span className="fas fa-search"></span>
-                        <span id="loginButtonText">Wyszukiwarka</span>
+                        <span className="loginButtonText">Wyszukiwarka</span>
                     </div>
                 </div>
             </div>

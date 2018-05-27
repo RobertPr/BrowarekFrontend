@@ -8,6 +8,7 @@
 	border-width: 3px;
 	display: flex;
 	flex-direction: row;
+	margin: 5px;
 }
 
 .fa-beer {    
@@ -53,10 +54,9 @@
 	box-shadow: 0px 0px 1px 0.1px black;
 }
 
-#loginButtonText{
-	font-size: 28px;
-	font-family: Trirong;
-	font-weight: bold;
+.loginButtonText{
+	font-size: 22px;
+	font-family: Mitr;
 	color: #3a3a3a;
 }
 
