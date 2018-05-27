@@ -31,10 +31,10 @@ class MainScreen extends React.Component {
 					<div id="allBeersWindow">
 						<ul id="allBeersList">
 							{this.state.beers && this.state.beers.map((beer) =>
-								<li key={beer.id} className="beerRectangleMS"><a href=""></a>
+								<Link key={beer.id} to={`/beer/${beer.id}`} className="beerRectangleMS"><a href=""></a>
 									<div className="beerImgContainerMS" style={{backgroundImage: `url(${beer.image})`}}></div>
 									<div className="beerNameMS">{beer.name}</div>
-								</li>)}
+								</Link>)}
 
 						</ul>
 					</div>

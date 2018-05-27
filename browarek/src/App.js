@@ -32,8 +32,8 @@ class App extends Component {
           <Route exact path="/register" component={Register} />
           <Route exact path="/addBeer" component={AddBeer} />
           <Route exact path="/addBrewery" component={AddBrewery} />
-          <Route exact path="/breweryCard" component={BreweryCard} /> {/* zmienic zeby bylo id browaru */}
-          <Route exact path="/beerCard" component={BeerCard} /> {/* zmienic zeby bylo id piwa */}
+          <Route exact path="/breweryCard/:breweryId" component={BreweryCard} /> 
+          <Route exact path="/beerCard/:beerId" component={BeerCard} /> {/* zmienic zeby bylo id piwa */}
           <Route exact path="/beerSearch" component={BeerSearch} />
           <Route exact path="/brewerySearch" component={BrewerySearch} />
           <Route exact path="/beerResults" component={BeerResults} />
