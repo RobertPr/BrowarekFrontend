@@ -1,7 +1,8 @@
 import React from 'react';
 import './BrewerySearch.css';
-import { Link } from 'react-router-dom';
+import { Link, Redirect, withRouter } from 'react-router-dom';
 import axios from 'axios';
+import BreweryResults from '../breweryResults/BreweryResults';
 
 
 class BrewerySearch extends React.Component {
@@ -37,7 +38,7 @@ class BrewerySearch extends React.Component {
                     </Link>
                     <button id="beerSwitchBrewery">Browary</button>
                 </div>
-                <form id="brewerySearchFrom">
+                <form id="brewerySearchFrom" onSubmit={this.onSubmit}>
                 <input name="Name" id="searchName" form="searchForm" placeholder="Wpisz nazwe browaru" />
                 <div id="twoColumns">
                     <div id="FilterDesc">
@@ -61,4 +62,4 @@ class BrewerySearch extends React.Component {
     }
 }
 
-export default BrewerySearch;
+export default withRouter(BrewerySearch);
