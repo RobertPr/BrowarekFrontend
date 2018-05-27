@@ -17,8 +17,8 @@ class BreweryResults extends React.Component {
 		}
 	}
 	replaceImages = (brewers) => {
-		for (let brewer of brewers) {
-			brewer.image = base64ToImageUrl(brewer.image);
+		for (let brewery of brewers) {
+			brewery.image = base64ToImageUrl(brewery.image);
 		}
 		this.setState({ results: brewers });
 	}
@@ -30,7 +30,7 @@ class BreweryResults extends React.Component {
                 <div id="beerWindow">
                     <ul id="beerList">
 						{this.state.results.map(brewer =>
-							<Link key={brewer.id} to={`/brewerCard/${brewer.id}`} className="beerRectangle">
+							<Link key={brewer.id} to={`/breweryCard/${brewer.id}`} className="beerRectangle">
 								<div className="beerImgContainer" style={{ backgroundImage: `url(${brewer.image})` }}></div>
 								<div className="beerName">{brewer.name}</div>
                             </Link>)}
