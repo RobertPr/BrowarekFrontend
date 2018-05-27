@@ -19,16 +19,16 @@ class BeerSearch extends React.Component {
                 <input id="searchName" form="searchForm" placeholder="Wpisz nazwe piwa" />
                 <div id="twoColumns">
                     <div id="FilterDesc">
-                        <div id="Desc">Filtrowanie</div>
+                        <div className="Desc">Filtrowanie</div>
                         <br></br>
-                        <div id="Desc">Styl:</div>
+                        <div className="Desc">Styl:</div>
                         {/* <div id="Desc">Kraj:</div>
                         <div id="Desc">Producent:</div>
                        <div id="Desc">Typ producenta:</div> */}
-                        <div id="Desc">Obj. alkoholu w %:</div>
-                        <div id="Desc">Gorzkość w IBU:</div>
-                        <div id="Desc">Ocena użytkowników:</div>
-                        <div id="Desc">Ekstrakt w °Blg:</div>
+                        <div className="Desc">Obj. alkoholu w %:</div>
+                        <div className="Desc">Gorzkość w IBU:</div>
+                        <div className="Desc">Ocena użytkowników:</div>
+                        <div className="Desc">Ekstrakt w °Blg:</div>
                     </div>
                     <form id="searchForm">
                         <button id="clearFilters">Wyczyść filtry</button>
@@ -39,7 +39,7 @@ class BeerSearch extends React.Component {
                          <select className="combobox" name="producerType"></select> */}
                         <input className="rangeSlider" type="range" multiple value="10,80" />
                         <input className="rangeSlider" type="range" multiple value="10,80" />
-                        <input id="range3" className="rangeSlider" type="range" multiple value="10,80" />
+                        <input id="range3" className="rangeSlider" type="range" multiple value="10,80" /> 
                         <input className="rangeSlider" type="range" multiple value="10,80" />
                     </form>
                 </div>

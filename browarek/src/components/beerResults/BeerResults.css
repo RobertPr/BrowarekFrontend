@@ -60,7 +60,7 @@
 
 /* koniec wyglądu scrolla */
 
-#beerImgContainer{
+.beerImgContainer{
 	border-radius: 2px;
 	background-image: url("http://www.grupazywiec.pl/wp-content/uploads/2016/02/Zywiec-Biale-puszka-4-x-500-lewa.png");
 	background-color: white;
@@ -71,7 +71,7 @@
 	align-self: center;
 }
 
-#beerName{
+.beerName{
 	display: flex;
 	font-size: 36px;
 	font-family: Mitr;

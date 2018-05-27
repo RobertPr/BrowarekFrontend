@@ -11,11 +11,11 @@ class AddBeer extends React.Component {
     render = () => {
         return (
             <React.Fragment>
-                <div id="addBeerPhoto">
-                    <span id="addImgDesc">Kliknij, aby dodać zdjęcie piwa</span>
+                <div className="addBeerPhoto">
+                    <span className="addImgDesc">Kliknij, aby dodać zdjęcie piwa</span>
                 </div>
-                <div id="addBreweryPhoto">
-                    <span id="addImgDesc">Kliknij, aby dodać zdjęcie browaru</span>
+                <div className="addBreweryPhoto">
+                    <span className="addImgDesc">Kliknij, aby dodać zdjęcie browaru</span>
                 </div>
                 <div id="addBreweryContainer">
                     <div id="addBreweryTitle">Dodaj</div>

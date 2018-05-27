@@ -200,7 +200,7 @@ label{
 	margin-bottom: 20px;
 }
 
-#addBeerPhoto{ 
+.addBeerPhoto{ 
 	align-self: flex-end;
 	border-radius: 5px;
 	margin-top: 50px;
@@ -226,6 +226,6 @@ label{
 	right: 100px;
 }
 
-#addImgDesc{
+.addImgDesc{
 	margin-left: 18%;
 }

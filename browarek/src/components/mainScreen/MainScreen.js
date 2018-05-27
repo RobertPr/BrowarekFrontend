@@ -21,25 +21,25 @@ class MainScreen extends React.Component {
 						<div id="allBeersWindow">
 								<ul id="allBeersList">
 									<li className="beerRectangleMS"><a href=""></a>
-											<div id="beerImgContainerMS"></div>
-											<div id="beerNameMS">Żywiec białe</div>
+											<div className="beerImgContainerMS"></div>
+											<div className="beerNameMS">Żywiec białe</div>
 									</li>
 									<li className="beerRectangleMS"><a href=""></a>
-											<div id="beerImgContainerMS"></div>
-											<div id="beerNameMS">Żywiec białe</div>
+											<div className="beerImgContainerMS"></div>
+											<div className="beerNameMS">Żywiec białe</div>
 									</li><li className="beerRectangleMS"><a href=""></a>
-											<div id="beerImgContainerMS"></div>
-											<div id="beerNameMS">Żywiec białe</div>
+											<div className="beerImgContainerMS"></div>
+											<div className="beerNameMS">Żywiec białe</div>
 									</li><li className="beerRectangleMS"><a href=""></a>
-											<div id="beerImgContainerMS"></div>
-											<div id="beerNameMS">Żywiec białe</div>
+											<div className="beerImgContainerMS"></div>
+											<div className="beerNameMS">Żywiec białe</div>
 									</li><li className="beerRectangleMS"><a href=""></a>
-											<div id="beerImgContainerMS"></div>
-											<div id="beerNameMS">Żywiec białe</div>
+											<div className="beerImgContainerMS"></div>
+											<div className="beerNameMS">Żywiec białe</div>
 									</li>
 									<li className="beerRectangleMS"><a href=""></a>
-											<div id="beerImgContainerMS"></div>
-											<div id="beerNameMS">Żywiec białe</div>
+											<div className="beerImgContainerMS"></div>
+											<div iclassName="beerNameMS">Żywiec białe</div>
 									</li>
 								</ul>
 						</div>

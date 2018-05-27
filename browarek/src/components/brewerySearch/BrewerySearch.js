@@ -19,11 +19,11 @@ class BrewerySearch extends React.Component {
                 <input id="searchName" form="searchForm" placeholder="Wpisz nazwe browaru" />
                 <div id="twoColumns">
                     <div id="FilterDesc">
-                        <div id="Desc">Filtrowanie</div>
+                        <div className="Desc">Filtrowanie</div>
                         <br></br>
-                        <div id="Desc">Typ producenta:</div>
-                        <div id="Desc">Kraj:</div>
-                        <div id="Desc">Rok założenia:</div>
+                        <div className="Desc">Typ producenta:</div>
+                        <div className="Desc">Kraj:</div>
+                        <div className="Desc">Rok założenia:</div>
                     </div>
                     <form id="searchForm">
                         <button id="clearFilters">Wyczyść filtry</button>

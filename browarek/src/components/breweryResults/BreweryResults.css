@@ -60,7 +60,7 @@
 
 /* koniec wyglądu scrolla */
 
-#beerImgContainer{
+.beerImgContainer{
 	border-radius: 2px;
 	background-image: url("http://www.beskidyinfo.pl/media/content/241/browarwzywcu_05.jpg");
 	background-color: white;
@@ -71,7 +71,7 @@
 	align-self: center;
 }
 
-#beerName{
+.beerName{
 	display: flex;
 	font-size: 36px;
 	font-family: Mitr;

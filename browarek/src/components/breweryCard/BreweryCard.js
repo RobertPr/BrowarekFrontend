@@ -47,28 +47,28 @@ class BreweryCard extends React.Component {
                         <div id="beerWindowBC">
                             <ul id="beerList">
                                 <li className="beerRectangle"><a href=""></a>
-                                    <div id="beerImgContainer"></div>
-                                    <div id="beerName">Żywiec białe</div>
+                                    <div className="beerImgContainer"></div>
+                                    <div className="beerName">Żywiec białe</div>
                                 </li>
                                 <li className="beerRectangle"><a href=""></a>
-                                    <div id="beerImgContainer"></div>
-                                    <div id="beerName">Żywiec białe</div>
+                                    <div classNamed="beerImgContainer"></div>
+                                    <div className="beerName">Żywiec białe</div>
                                 </li>
                                 <li className="beerRectangle"><a href=""></a>
-                                    <div id="beerImgContainer"></div>
-                                    <div id="beerName">Żywiec białe</div>
+                                    <div className="beerImgContainer"></div>
+                                    <div className="beerName">Żywiec białe</div>
                                 </li>
                                 <li className="beerRectangle"><a href=""></a>
-                                    <div id="beerImgContainer"></div>
-                                    <div id="beerName">Żywiec białe</div>
+                                    <div classNamed="beerImgContainer"></div>
+                                    <div className="beerName">Żywiec białe</div>
                                 </li>
                                 <li className="beerRectangle"><a href=""></a>
-                                    <div id="beerImgContainer"></div>
-                                    <div id="beerName">Żywiec białe</div>
+                                    <div className="beerImgContainer"></div>
+                                    <div className="beerName">Żywiec białe</div>
                                 </li>
                                 <li className="beerRectangle"><a href=""></a>
-                                    <div id="beerImgContainer"></div>
-                                    <div id="beerName">Żywiec białe</div>
+                                    <div className="beerImgContainer"></div>
+                                    <div className="beerName">Żywiec białe</div>
                                 </li>
                             </ul>
                         </div>

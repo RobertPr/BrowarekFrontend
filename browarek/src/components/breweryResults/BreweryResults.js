@@ -15,25 +15,25 @@ class BreweryResults extends React.Component {
                 <div id="beerWindow">
                     <ul id="beerList">
                         <li className="beerRectangle"><a href=""></a>
-                            <div id="beerImgContainer"></div>
-                            <div id="beerName">Browar żywiec</div>
+                            <div className="beerImgContainer"></div>
+                            <div className="beerName">Browar żywiec</div>
                         </li>
                         <li className="beerRectangle"><a href=""></a>
-                            <div id="beerImgContainer"></div>
-                            <div id="beerName">Browar żywiec</div>
+                            <div className="beerImgContainer"></div>
+                            <div className="beerName">Browar żywiec</div>
                         </li><li className="beerRectangle"><a href=""></a>
-                            <div id="beerImgContainer"></div>
-                            <div id="beerName">Browar żywiec</div>
+                            <div className="beerImgContainer"></div>
+                            <div className="beerName">Browar żywiec</div>
                         </li><li className="beerRectangle"><a href=""></a>
-                            <div id="beerImgContainer"></div>
-                            <div id="beerName">Browar żywiec</div>
+                            <div className="beerImgContainer"></div>
+                            <div className="beerName">Browar żywiec</div>
                         </li><li className="beerRectangle"><a href=""></a>
-                            <div id="beerImgContainer"></div>
-                            <div id="beerName">Browar żywiec</div>
+                            <div className="beerImgContainer"></div>
+                            <div className="beerName">Browar żywiec</div>
                         </li>
                         <li className="beerRectangle"><a href=""></a>
-                            <div id="beerImgContainer"></div>
-                            <div id="beerName">Browar żywiec</div>
+                            <div className="beerImgContainer"></div>
+                            <div className="beerName">Browar żywiec</div>
                         </li>
                     </ul>
                 </div>
