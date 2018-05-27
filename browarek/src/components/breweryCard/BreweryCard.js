@@ -1,18 +1,31 @@
 import React from 'react';
 import './BreweryCard.css';
 import { Link } from 'react-router-dom';
+import base64ToImageUrl from '../../services/base64ToImageUrl';
+import breweryTypes from '../../data/breweryTypes';
+import countries from '../../data/countries';
+import axios from 'axios';
 
 class BreweryCard extends React.Component {
     state = { error: "" };
     componentDidMount = () => {
-        axios.get(`/beer/${this.props.match.params.beerId}`)
+        axios.get(`/brewery/${this.props.match.params.breweryId}`)
             .then(response => this.replaceImage(response.data))
             .catch(error => console.log(error));
+
+        axios.get(`/beer/brewery/${this.props.match.params.breweryId}`)
+            .then(response => this.replaceImages(response.data))
+            .catch(error => console.log(error));
     }
-    replaceImage = (beer) => {
-        beer.image = base64ToImageUrl(beer.image);
-        beer.blg = beer.blg ? beer.blg + "°" : beer.blg
-        this.setState({ ...beer })
+    replaceImage = (brewery) => {
+        brewery.image = base64ToImageUrl(brewery.image);
+        this.setState({ ...brewery })
+    }
+    replaceImages = (beers) => {
+        for (let beer of beers) {
+            beer.image = base64ToImageUrl(beer.image);
+        }
+        this.setState({ beers })
     }
 
     render = () => {
@@ -20,16 +33,16 @@ class BreweryCard extends React.Component {
             <React.Fragment>
                 <div id="mainContainer">
                     <div id="leftSide">
-                        <div id="breweryName">Żywiec</div>
+                        <div id="breweryName">{this.state.name}</div>
                         <div id="descBox">
                             <div className="descTitle" id="producerTypeTitle">Typ producenta</div>
-                            <div className="descVar" id="producerType">Regionalny</div>
+                            <div className="descVar" id="producerType">{breweryTypes[this.state.type]}</div>
                             <div className="descTitle" id="countryTitle">Kraj</div>
-                            <div className="descVar" id="Country">Polska</div>
+                            <div className="descVar" id="Country">{this.state.country && countries[this.state.country].name_pl}</div>
                             <div className="descTitle" id="createDateTitle">Rok założenia</div>
-                            <div className="descVar" id="createDate">1864</div>
+                            <div className="descVar" id="createDate">{this.state.yearEst}</div>
                         </div>
-                        <div id="imgContainer">
+                        <div id="imgContainer" style={{ backgroundImage: `url(${this.state.image})` }}>
                             {/* <div id="rateBeerStars">
                                 <form>
                                     <div className="rating">
@@ -53,30 +66,11 @@ class BreweryCard extends React.Component {
                         <div id="beerListTitleBC">Piwa tego browaru</div>
                         <div id="beerWindowBC">
                             <ul id="beerList">
-                                <li className="beerRectangle"><a href=""></a>
-                                    <div className="beerImgContainer"></div>
-                                    <div className="beerName">Żywiec białe</div>
-                                </li>
-                                <li className="beerRectangle"><a href=""></a>
-                                    <div classNamed="beerImgContainer"></div>
-                                    <div className="beerName">Żywiec białe</div>
-                                </li>
-                                <li className="beerRectangle"><a href=""></a>
-                                    <div className="beerImgContainer"></div>
-                                    <div className="beerName">Żywiec białe</div>
-                                </li>
-                                <li className="beerRectangle"><a href=""></a>
-                                    <div classNamed="beerImgContainer"></div>
-                                    <div className="beerName">Żywiec białe</div>
-                                </li>
-                                <li className="beerRectangle"><a href=""></a>
-                                    <div className="beerImgContainer"></div>
-                                    <div className="beerName">Żywiec białe</div>
-                                </li>
-                                <li className="beerRectangle"><a href=""></a>
-                                    <div className="beerImgContainer"></div>
-                                    <div className="beerName">Żywiec białe</div>
-                                </li>
+                                {this.state.beers && this.state.beers.map((beer) =>
+                                    <Link key={beer.id} to={`/beerCard/${beer.id}`} className="beerRectangle">
+                                        <div className="beerImgContainerMS" style={{ backgroundImage: `url(${beer.image})` }}></div>
+                                        <div className="beerName">{beer.name}</div>
+                                    </Link>)}
                             </ul>
                         </div>
                     </div>

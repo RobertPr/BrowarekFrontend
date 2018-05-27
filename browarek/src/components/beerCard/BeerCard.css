@@ -1,24 +1,24 @@
-#mainContainer{
+#mainContainer {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 	width: 100%;
 }
 
-#leftHalf{
+#leftHalf {
 	width: 50%
 }
 
-#rightHalf{
+#rightHalf {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 	width: 50%;
 }
 
-#beerNameBeerCard{
-	font-family: Mitr; 
-	font-size: 70px; 
+#beerNameBeerCard {
+	font-family: Mitr;
+	font-size: 70px;
 	color: white;
 	text-shadow: 1px 1px 3px black;
 	text-align: center;
@@ -26,29 +26,28 @@
 	margin-top: 30px;
 }
 
-#imgAndDesc{
+#imgAndDesc {
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
 	margin-top: 30px;
-	
 }
 
-#beerImg{
+#beerImg {
 	display: block;
-  margin: 0 auto;
-  overflow:hidden;
-	-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent),   color-stop(70%, transparent) , to(rgba(250, 250, 250, 0.1)));
+	margin: 0 auto;
+	overflow: hidden;
+	-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(250, 250, 250, 0.1)));
 	align-items: center;
 }
 
-#Desc{
-	display:flex;
+#Desc {
+	display: flex;
 	width: 50%;
 	flex-direction: column;
 }
 
-.descTitle{
+.descTitle {
 	font-size: 20px;
 	color: white;
 	text-shadow: 1px 1px 2px black;
@@ -56,14 +55,14 @@
 	margin-bottom: 10px;
 }
 
-.descVar{
+.descVar {
 	margin-bottom: 10px;
 	font-size: 26px;
 	color: #3a3a3a;
 	font-family: PT Serif;
 }
 
-#alcoAndLongDescContainer{
+#alcoAndLongDescContainer {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
@@ -71,21 +70,21 @@
 	margin-left: -25px;
 }
 
-#alcoholTitle{
+#alcoholTitle {
 	font-family: PT Serif;
 	color: white;
 	text-shadow: 1px 1px 2px black;
 	font-size: 25px;
 }
 
-#alcoholPercent{
+#alcoholPercent {
 	font-family: PT Serif;
 	font-size: 60px;
 	color: #3a3a3a;
 	margin-top: 35px;
 }
 
-#rateBeer{
+#rateBeer {
 	display: flex;
 	flex-direction: column;
 	margin-top: 30px;
@@ -93,68 +92,60 @@
 	width: 50%;
 }
 
-#rateBeerTitle{
+#rateBeerTitle {
 	font-family: PT Serif;
 	color: white;
 	text-shadow: 1px 1px 2px black;
 	font-size: 25px;
 	margin-bottom: 30px;
-
 }
 
 /* poczatek cssa gwiazdek */
 
-#rateBeerStars{
+#rateBeerStars {
 	text-align: center;
 }
 
 .hide {
-    display: none;
+	display: none;
 }
 
 .clear {
-    float: none;
-    clear: both;
+	float: none;
+	clear: both;
 }
 
 .rating {
-    unicode-bidi: bidi-override;
-    direction: rtl;
-    text-align: center;
-    position: relative;
-	
+	unicode-bidi: bidi-override;
+	direction: rtl;
+	text-align: center;
+	position: relative;
 }
 
-.rating > label {
-    display: inline;
-    padding: 20px;
-    margin: 0;
-    position: relative;
-    /* width: 3.1em; */
-    cursor: pointer;
-    color: #000;
-	
+.rating>label {
+	display: inline;
+	padding: 20px;
+	margin: 0;
+	position: relative;
+	/* width: 3.1em; */
+	cursor: pointer;
+	color: #000;
 }
 
-.rating > label:hover,
-.rating > label:hover ~ label,
-.rating > input.radio-btn:checked ~ label {
-    color: transparent;
+.rating>label:hover, .rating>label:hover~label, .rating>input.radio-btn:checked~label {
+	color: transparent;
 }
 
-.rating > label:hover:before,
-.rating > label:hover ~ label:before,
-.rating > input.radio-btn:checked ~ label:before,
-.rating > input.radio-btn:checked ~ label:before {
-    content: "\2605";
-    position: absolute;
-    left: 0;
-    color: #FFD700;
+.rating>label:hover:before, .rating>label:hover~label:before, .rating>input.radio-btn:checked~label:before, .rating>input.radio-btn:checked~label:before {
+	content: "\2605";
+	position: absolute;
+	left: 0;
+	color: #FFD700;
 }
 
 /* koniec cssa gwizadek */
 
-#longDescTitle{
+#longDescTitle {
 	font-family: PT Serif;
 	color: white;
 	text-shadow: 1px 1px 2px black;
@@ -162,7 +153,7 @@
 	margin-top: 65px;
 }
 
-#longDesc{
+#longDesc {
 	margin-top: 20px;
 	width: 400px;
 	text-align: left;
@@ -176,7 +167,7 @@
 	max-height: 480px;
 }
 
-#commentsTitle{
+#commentsTitle {
 	font-family: PT Serif;
 	color: white;
 	text-shadow: 1px 1px 2px black;
@@ -184,7 +175,7 @@
 	margin-top: 70px;
 }
 
-#commentBox{
+#commentBox {
 	display: flex;
 	flex-direction: column;
 	margin-top: 30px;

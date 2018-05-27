@@ -27,7 +27,7 @@ class MainScreen extends React.Component {
 					<img id="mainPhoto" src="http://www.icarusbrewing.com/wp-content/uploads/2015/11/download.jpg" height="470" width="auto" />
 				</div>
 				<div id="magicalContainerMS">
-					<div id="ourBeersTitle">Nasze piwa</div>
+					<div id="ourBeersTitle">Wszystkie piwa</div>
 					<div id="allBeersWindow">
 						<ul id="allBeersList">
 							{this.state.beers && this.state.beers.map((beer) =>

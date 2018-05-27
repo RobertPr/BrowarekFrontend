@@ -7,14 +7,14 @@ class NavbarLogged extends React.Component {
     state = {}
     componentDidMount = () => {
         axios.get(`/user/name/${this.props.userId}`)
-            .then(response => this.setState({...response.data}))
+            .then(response => this.setState({ ...response.data }))
             .catch(error => console.log(error));
     }
     render = () => {
         return (
             <div id="navbarLogged">
-                <div className="fas fa-beer"></div>
-                <div id="logoText">Browarek</div>
+                <Link to="/" className="fas fa-beer"></Link>
+                <Link to="/" id="logoText">Browarek</Link>
                 <div id="navbarButtonsContainer">
                     <Link to="/beerSearch">
                         <div className="navbarButton">
