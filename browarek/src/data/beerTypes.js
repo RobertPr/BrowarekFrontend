@@ -1,0 +1,1 @@
+export default [ "pils", "lager", "koźlak", "porter", "pale ale", "stout"]

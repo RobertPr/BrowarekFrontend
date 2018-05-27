@@ -3,9 +3,16 @@ import './BreweryCard.css';
 import { Link } from 'react-router-dom';
 
 class BreweryCard extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { error: "" };
+    state = { error: "" };
+    componentDidMount = () => {
+        axios.get(`/beer/${this.props.match.params.beerId}`)
+            .then(response => this.replaceImage(response.data))
+            .catch(error => console.log(error));
+    }
+    replaceImage = (beer) => {
+        beer.image = base64ToImageUrl(beer.image);
+        beer.blg = beer.blg ? beer.blg + "°" : beer.blg
+        this.setState({ ...beer })
     }
 
     render = () => {

@@ -22,13 +22,17 @@ class App extends Component {
     axios.defaults.headers.common['Authorization'] = "Bearer " + token;
     this.props.history.push("/");
   }
+  onLogOut = () => {
+    this.setState({ token: undefined, userId: undefined });
+    delete axios.defaults.headers.common['Authorization'];
+  }
   render() {
     return (
       <React.Fragment>
-        {this.state.token ? <NavbarLogged /> : <NavbarUnLogged /> }
+        {this.state.token ? <NavbarLogged userId={this.state.userId}/> : <NavbarUnLogged /> }
         <Switch>
           <Route exact path="/" component={() => <MainScreen token={this.state.token} />} />
-          <Route exact path="/login" render={() => <Login onLogin={this.onLogin}/>} /> {/* niestety chyba tak trzeba zeby propsy przekazac :/  */}
+          <Route exact path="/login" render={() => <Login onLogin={this.onLogin} onLogOut={this.onLogOut} />} /> {/* niestety chyba tak trzeba zeby propsy przekazac :/  */}
           <Route exact path="/register" component={Register} />
           <Route exact path="/addBeer" component={AddBeer} />
           <Route exact path="/addBrewery" component={AddBrewery} />

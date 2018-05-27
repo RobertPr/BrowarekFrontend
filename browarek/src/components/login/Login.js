@@ -10,7 +10,6 @@ class Login extends React.Component {
 
 	handleSubmit = (event) => {
 		event.preventDefault();
-		console.log(this.props.history.push);
 		const form = event.target;
 		axios.post('/authentication/login', { Email: form.email.value, Password: form.password.value})
 			.then((response) => {

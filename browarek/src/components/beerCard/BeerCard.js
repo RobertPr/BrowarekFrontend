@@ -1,46 +1,54 @@
 import React from 'react';
 import './BeerCard.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import base64ToImageUrl from '../../services/base64ToImageUrl';
+import beerTypes from '../../data/beerTypes';
+import breweryTypes from '../../data/breweryTypes';
+import countries from '../../data/countries';
 
 class BeerCard extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { error: "" };
+    state = { error: "" };
+    componentDidMount = () => {
+        axios.get(`/beer/${this.props.match.params.beerId}`)
+            .then(response => this.replaceImage(response.data))
+            .catch(error => console.log(error));
     }
+    replaceImage = (beer) => {
+        beer.image = base64ToImageUrl(beer.image);
+        beer.blg = beer.blg ? beer.blg + "°" : beer.blg
+		this.setState({ ...beer })
+	}
 
     render = () => {
         return (
             <div id="mainContainer">
                 <div id="leftHalf">
-                    <div id="beerNameBeerCard">Perła Export</div>
+                    <div id="beerNameBeerCard">{this.state.name}</div>
                     <div id="imgAndDesc">
-                        <img id="beerImg" src="http://www.jakiepiwo.pl/beers/img/W96ynk/0feaaf6f09779c84940ce0dd565a263f_lg.png"/>
+                        <img id="beerImg" src={this.state.image} />
                         <div id="Desc">
                             <div className="descTitle" id="breweryTitle">Browar</div>
-                            <div className="descVar" id="breweryVar">Perła Browary Lubelskie S.A.</div>
+                            <div className="descVar" id="breweryVar">{this.state.brewery}</div>
                             <div className="descTitle" id="producerTypeTitle">Typ producenta</div>
-                            <div className="descVar" id="producerTypeVar">Koncern</div>
-                            <div className="descTitle" id="countryTitle">Kraj</div>
-                            <div className="descVar" id="countryVar">Polska</div>
+                            <div className="descVar" id="producerTypeVar">{this.state.breweryType != undefined && breweryTypes[this.state.breweryType]}</div>
+                            <div className="descTitle" id="styleTitle">Kraj</div>
+                            <div className="descVar" id="styleVar">{this.state.country && countries[this.state.country].name_pl}</div>
                             <div className="descTitle" id="styleTitle">Styl</div>
-                            <div className="descVar" id="styleVar">Pale lager</div>
-                            <div className="descTitle" id="tempTitle">Temp. podawania</div>
-                            <div className="descVar" id="tempVar">0 - 4 *C</div>
-                            <div className="descTitle" id="servingTitle">Podawać w</div>
-                            <div className="descVar" id="servingVar">Shaker lager</div>
-                            <div className="descTitle" id="ibuTitle">IBU</div>
-                            <div className="descVar" id="ibuVar">15</div>
-                            <div className="descTitle" id="blgTitle">Blg</div>
-                            <div className="descVar" id="blgVar">11*</div>
+                            <div className="descVar" id="styleVar">{this.state.style != undefined && beerTypes[this.state.style]}</div>
+                            {this.state.ibu && <div className="descTitle" id="ibuTitle">IBU</div> }
+                            <div className="descVar" id="ibuVar">{this.state.ibu}</div>
+                            {this.state.blg && <div className="descTitle" id="blgTitle">Blg</div> }
+                            <div className="descVar" id="blgVar">{this.state.blg}</div>
                         </div>
                     </div>
                 </div>
                 <div id="rightHalf">
                     <div id="alcoAndLongDescContainer">
                         <div id="alcoholTitle">Alkohol</div>
-                        <div id="alcoholPercent">6,0%</div>
+                        <div id="alcoholPercent">{this.state.alcohol}%</div>
                         <div id="longDescTitle">Opis</div>
-                        <div id="longDesc">Wytwory małży (głównie perłopławów z rodzajów Pteria i Pinctada), rzadko ślimaków. Zbudowane są z tej samej substancji co wewnętrzna strona muszli (masa perłowa), której głównymi składnikami są węglan wapnia (w postaci aragonitu) i rogowata substancjabiałkowa (konchiolina), która spaja mikrokryształy skupione koncentrycznie wokół jądra. Perły powstają najczęściej w wyniku reakcji organizmu na ciało obce, które przedostało się do muszli. W jubilerstwie perły definiuje się jako „produkty naturalnepochodzenia organicznego, powstałe w płaszczu muszli perłopławów perłorodnych lub inny.</div>
+                        <div id="longDesc">{this.state.description}</div>
                     </div>
                     {/* <div id="rateBeer">
                         <div id="rateBeerTitle">Oceń piwo!</div>
@@ -66,8 +74,8 @@ class BeerCard extends React.Component {
                     </div> */}
                 </div>
             </div>
-                );
-            }
-        }
-        
+        );
+    }
+}
+
 export default BeerCard;

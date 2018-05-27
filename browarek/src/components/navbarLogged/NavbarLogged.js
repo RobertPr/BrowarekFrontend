@@ -1,37 +1,39 @@
 import React from 'react';
 import './NavbarLogged.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 class NavbarLogged extends React.Component {
-    constructor() {
-        super();
-        this.state = {};
+    state = {}
+    componentDidMount = () => {
+        axios.get(`/user/name/${this.props.userId}`)
+            .then(response => this.setState({...response.data}))
+            .catch(error => console.log(error));
     }
-
     render = () => {
         return (
             <div id="navbarLogged">
                 <div className="fas fa-beer"></div>
                 <div id="logoText">Browarek</div>
                 <div id="navbarButtonsContainer">
-                <Link to="/beerSearch">
-                    <div className="navbarButton">
-                        <span className="fas fa-search"></span>
-                        <span className="navbarButtonText">Wyszukiwarka</span>
-                    </div>
-                </Link>
-                <Link to="/addBeer">
-                    <div className="navbarButton">
-                        <span className="fas fa-plus-square"></span>
-                        <span className="navbarButtonText">Dodaj</span>
-                    </div>
-                </Link>
+                    <Link to="/beerSearch">
+                        <div className="navbarButton">
+                            <span className="fas fa-search"></span>
+                            <span className="navbarButtonText">Wyszukiwarka</span>
+                        </div>
+                    </Link>
+                    <Link to="/addBeer">
+                        <div className="navbarButton">
+                            <span className="fas fa-plus-square"></span>
+                            <span className="navbarButtonText">Dodaj</span>
+                        </div>
+                    </Link>
                 </div>
                 <div id="userAndLogout">
                     <div id="user">
-                        <span id="userText">Krzysztof Kononowicz</span>
+                        <span id="userText">{`${this.state.firstName} ${this.state.lastName}`}</span>
                     </div>
-                    <button id="logoutButton" type="button">Wyloguj</button>
+                    <button id="logoutButton" type="button" onClick={this.props.onLogOut}>Wyloguj</button>
                 </div>
             </div>
         );

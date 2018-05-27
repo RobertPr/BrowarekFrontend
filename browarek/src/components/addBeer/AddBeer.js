@@ -1,46 +1,84 @@
 import React from 'react';
 import './AddBeer.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import beerTypes from '../../data/beerTypes';
 
 class AddBeer extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { error: "" };
+    state = { error: "", breweries: [] }
+    componentDidMount = () => {
+        axios.get('/brewery')
+            .then(response => this.setState({ breweries: response.data }))
+            .catch(error => console.log(error));
+    }
+
+    onSubmit = (event) => {
+        event.preventDefault();
+        const form = event.target;
+
+        const formData = new FormData();
+        
+        const data = {
+            name: form.Name.value,
+            style: form.Style.value,
+            alcohol: form.Alcohol.value,
+            ibu: form.Ibu.value,
+            blg: form.Blg.value,
+            description: form.BeerDesc.value,
+            image: this.state.beerImage,
+            brewery: form.addBreweryList.value
+        }
+        for(let key in data){
+            formData.append(key, data[key]);
+        }
+
+        axios.post("/beer", formData)
+            .then(response => this.props.history.push(`/beerCard/${response.data}`))
+            .catch(error => console.log(error));
+    }
+    handleImageUpload = (e) => {
+        const image = e.target.files[0];
+        this.setState({beerImage: image});
     }
 
     render = () => {
         return (
             <React.Fragment>
-                <div className="addBeerPhoto">
-                    <span className="addImgDesc">Kliknij, aby dodać zdjęcie piwa</span>
-                </div>
-                <div className="addBreweryPhoto">
-                    <span className="addImgDesc">Kliknij, aby dodać zdjęcie browaru</span>
+                <div className="addBeerPhoto" >
+                    <label htmlFor="photoInput" className="addImgDesc">Kliknij, aby dodać zdjęcie piwa</label>
+                    <input name="photoInput" type="file" onChange={this.handleImageUpload}/>
                 </div>
                 <div id="addBreweryContainer">
                     <div id="addBreweryTitle">Dodaj</div>
                     <div id="searchSwitch">
                         <button id="brewerySwitch">Piwo</button>
                         <Link to="/addBrewery">
-                        <button id="beerSwitch">Browar</button>
+                            <button id="beerSwitch">Browar</button>
                         </Link>
                     </div>
-                    <form id="beerForm">
+                    <form id="beerForm" onSubmit={this.onSubmit}>
+                        <div>
+                            <label>Nazwa</label>
+                            <input className="addBreweryInput" type="text" name="Name" />
+                        </div>
                         <div>
                             <label>Styl</label>
-                            <input className="addBreweryInput" type="text" name="Style" />
+                            <select className="addBreweryInput" type="text" name="Style">
+                                {beerTypes.map((type, i) =>
+                                    <option key={i} value={i}>{type}</option>)}
+                            </select>
                         </div>
                         <div>
                             <label>Obj. alkoholu w %</label>
-                            <input className="addBreweryInput" type="text" name="alco%" />
+                            <input className="addBreweryInput" type="text" name="Alcohol" />
                         </div>
                         <div>
                             <label>Gorzkość</label>
-                            <input className="addBreweryInput" type="text" name="Gorzkosc" />
+                            <input className="addBreweryInput" type="text" name="Ibu" />
                         </div>
                         <div>
                             <label>Ekstrakt w *Blg</label>
-                            <input className="addBreweryInput" type="text" name="Ekstrakt" />
+                            <input className="addBreweryInput" type="text" name="Blg" />
                         </div>
                         {/* <div id="rateBeerStars">
                             <label className="rateBeerTitle">Twoja ocena</label>
@@ -58,31 +96,16 @@ class AddBeer extends React.Component {
                                 <div className="clear"></div>
                             </div>
                         </div> */}
-                       {/*  <textarea className="addBreweryInputLong" type="text" name="Comment" placeholder="Komentarz"></textarea>
+                        {/*  <textarea className="addBreweryInputLong" type="text" name="Comment" placeholder="Komentarz"></textarea>
                         <br></br> */}
-                        <textarea className="addBreweryInputLong" type="text" name="beerDesc" placeholder="Opis piwa"></textarea>
-                            <div id="checkboxDiv">
-                                <input type="checkbox" name="addBrowarCheckBox" value="checked" />
-                                <label> Dodaj nowy browar</label>
-                                <select className="addBreweryInput" name="addBreweryList">
+                        <textarea className="addBreweryInputLong" type="text" name="BeerDesc" placeholder="Opis piwa"></textarea>
+                        <div id="checkboxDiv">
+                            <label> Browar</label>
+                            <select className="addBreweryInput" name="addBreweryList">
                                 <option hidden>Wybierz browar z listy</option>
-                                </select>
-			                </div>
-                        <div>
-                            <label>Nazwa browaru</label>
-                            <input className="addBreweryInput" type="text" name="alco%" />
-                        </div>
-                        <div>
-                            <label>Typ producenta</label>
-                            <input className="addBreweryInput" type="text" name="producerType" />
-                        </div>
-                        <div>
-                            <label>Kraj</label>
-                            <input className="addBreweryInput" type="text" name="Country" />
-                        </div>
-                        <div>
-                            <label>Rok założenia</label>
-                            <input className="addBreweryInput" type="text" name="creationYear" />
+                                {this.state.breweries.map(brewery =>
+                                    <option key={brewery.id} value={brewery.id}>{brewery.name}</option>)}
+                            </select>
                         </div>
                         <input name="addButton" type="submit" value="Dodaj" />
                     </form>
