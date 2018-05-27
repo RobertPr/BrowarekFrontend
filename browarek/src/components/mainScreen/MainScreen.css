@@ -111,17 +111,17 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #FFA090; 
+    background: #473B32; 
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #FFBF8B; 
+    background: #AD9079; 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #FFBF8B; 
+    background: #FFE2CC; 
 }
 
 /* koniec wyglądu scrolla */
