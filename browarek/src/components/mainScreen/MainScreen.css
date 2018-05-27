@@ -1,0 +1,127 @@
+#mainScreen{
+	display: flex;
+  justify-content: space-around;
+  align-content: space-between;
+	
+}
+
+#Welcome{
+	font-family: Mitr; 
+	font-size: 70px; 
+	color: white;
+	text-shadow: 1px 1px 3px black;
+	text-align: center;
+	margin-top: 30px;
+}
+
+#siteDesc{
+	margin-top: 20px;
+	width: 680px;
+	background-color: #FFFDE5;
+	padding: 15px;
+	padding-top: 10px;
+	border-radius: 5px;
+	font-size: 20px;
+	color: #3a3a3a;
+	overflow: auto;
+	margin-top: 30px;
+}
+
+#mainPhoto{
+	border-radius: 5px;
+	background-size:cover;
+	box-shadow: 0px 0px 4px 0.1px black;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+	margin-top: 60px;
+}
+
+#magicalContainerMS{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-right: 80px;
+}
+
+#ourBeersTitle{
+	font-family: Mitr; 
+	font-size: 70px; 
+	color: white;
+	text-shadow: 1px 1px 3px black;
+	text-align: center;
+	margin-top: 30px;
+}
+
+#allBeersWindow{
+	display: flex;
+	width: 150%;
+	height: auto;
+	justify-content: center;
+	background: #7A5F49;
+	border-radius: 5px;
+	margin-top: 30px;
+}
+
+#allBeersList{
+	list-style-type: none;
+	width: 94%;
+	max-height: 645px;
+	padding: 0;
+	overflow: auto;
+	padding-right: 1px;
+}
+
+.beerRectangleMS{
+	display: flex;
+	height:110px;
+	background: #FFFDE5;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	border-width: thin;
+	border-color: #3a3a3a;
+}
+
+#beerImgContainerMS{
+	border-radius: 2px;
+	background-image: url("http://www.grupazywiec.pl/wp-content/uploads/2016/02/Zywiec-Biale-puszka-4-x-500-lewa.png");
+	background-color: white;
+	width: 110px;
+	height: 110px;
+	background-size:cover;
+	box-shadow: 0px 0px 0.5px 0.1px black;
+	align-self: center;
+}
+
+#beerNameMS{
+	display: flex;
+	font-size: 36px;
+	font-family: Mitr;
+	color: #3a3a3a;
+	align-self: center;
+	vertical-align: middle;
+  margin-left: 30px;
+}
+
+/* wyglad scrolla */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #FFA090; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #FFBF8B; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #FFBF8B; 
+}
+
+/* koniec wyglądu scrolla */

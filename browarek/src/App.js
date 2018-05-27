@@ -12,6 +12,7 @@ import BeerResults from './components/beerResults/BeerResults';
 import BreweryResults from './components/breweryResults/BreweryResults';
 import NavbarLogged from './components/navbarLogged/NavbarLogged';
 import NavbarUnLogged from './components/navbarUnlogged/NavbarUnLogged';
+import MainScreen from './components/mainScreen/MainScreen';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
         {/* {props.logged} ? <NavbarLogged /> : <NavbarUnLogged />  zmienic na to jak bedzie wiadomo co z logowaniem */}
         <NavbarLogged />
         <Switch>
+          <Route exact path="/home" component={MainScreen} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/addBeer" component={AddBeer} />
