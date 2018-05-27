@@ -22,9 +22,9 @@ class BeerSearch extends React.Component {
                         <div id="Desc">Filtrowanie</div>
                         <br></br>
                         <div id="Desc">Styl:</div>
-                        <div id="Desc">Kraj:</div>
+                        {/* <div id="Desc">Kraj:</div>
                         <div id="Desc">Producent:</div>
-                        <div id="Desc">Typ producenta:</div>
+                       <div id="Desc">Typ producenta:</div> */}
                         <div id="Desc">Obj. alkoholu w %:</div>
                         <div id="Desc">Gorzkość w IBU:</div>
                         <div id="Desc">Ocena użytkowników:</div>
@@ -34,9 +34,9 @@ class BeerSearch extends React.Component {
                         <button id="clearFilters">Wyczyść filtry</button>
                         <br></br>
                         <select className="combobox" name="style"></select>
-                        <select className="combobox" name="Country"></select>
+                        {/* <select className="combobox" name="Country"></select>
                         <select className="combobox" name="Producer"></select>
-                        <select className="combobox" name="producerType"></select>
+                         <select className="combobox" name="producerType"></select> */}
                         <input className="rangeSlider" type="range" multiple value="10,80" />
                         <input className="rangeSlider" type="range" multiple value="10,80" />
                         <input id="range3" className="rangeSlider" type="range" multiple value="10,80" />

@@ -114,12 +114,13 @@
 }
 
 .rangeSlider{
-	margin-bottom: 17px;
+  margin-bottom: 60px;
+  
 }
 
 #range3{
-	margin-top:10px;
-	margin-bottom: 25px;
+	margin-top:8px;
+  margin-bottom: 50px;
 }
 
 #searchButton{
