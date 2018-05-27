@@ -33,7 +33,8 @@ class BeerResults extends React.Component {
 							<Link key={beer.id} to={`/beerCard/${beer.id}`} className="beerRectangleMS">
 								<div className="beerImgContainerMS" style={{ backgroundImage: `url(${beer.image})` }}></div>
 								<div className="beerNameMS">{beer.name}</div>
-							</Link>)}
+						</Link>)}
+						{this.state.results.length === 0 && <h2>Brak wyników</h2>}
 					</ul>
 				</div>
 			</div>
