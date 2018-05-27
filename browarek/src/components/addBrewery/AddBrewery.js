@@ -41,7 +41,7 @@ class AddBrewery extends React.Component {
                     <div id="addBreweryTitle">Dodaj</div>
                     <div id="addBreweryPhotoBrewery">
                         <label id="addImgDescBrewery">Kliknij, aby dodać zdjęcie</label>
-                        <input name="photoInput" type="file" onChange={this.handleImageUpload}/>
+                        <input id="addBreweryImg" name="photoInput" type="file" onChange={this.handleImageUpload}/>
                     </div>
                     <div id="searchSwitchBrewery">
                         <Link to="/addBeer">
