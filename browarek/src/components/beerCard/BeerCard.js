@@ -42,7 +42,7 @@ class BeerCard extends React.Component {
                         <div id="longDescTitle">Opis</div>
                         <div id="longDesc">Wytwory małży (głównie perłopławów z rodzajów Pteria i Pinctada), rzadko ślimaków. Zbudowane są z tej samej substancji co wewnętrzna strona muszli (masa perłowa), której głównymi składnikami są węglan wapnia (w postaci aragonitu) i rogowata substancjabiałkowa (konchiolina), która spaja mikrokryształy skupione koncentrycznie wokół jądra. Perły powstają najczęściej w wyniku reakcji organizmu na ciało obce, które przedostało się do muszli. W jubilerstwie perły definiuje się jako „produkty naturalnepochodzenia organicznego, powstałe w płaszczu muszli perłopławów perłorodnych lub inny.</div>
                     </div>
-                    <div id="rateBeer">
+                    {/* <div id="rateBeer">
                         <div id="rateBeerTitle">Oceń piwo!</div>
                         <div id="rateBeerStars">
                             <form>
@@ -63,7 +63,7 @@ class BeerCard extends React.Component {
                         </div>
                         <div id="commentsTitle">Komentarze</div>
                         <div id="commentBox"></div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
                 );

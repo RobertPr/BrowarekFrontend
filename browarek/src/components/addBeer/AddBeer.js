@@ -40,7 +40,7 @@ class AddBeer extends React.Component {
                             <label>Ekstrakt w *Blg</label>
                             <input className="addBreweryInput" type="text" name="Ekstrakt" />
                         </div>
-                        <div id="rateBeerStars">
+                        {/* <div id="rateBeerStars">
                             <label className="rateBeerTitle">Twoja ocena</label>
                             <div className="rating">
                                 <input id="star5" name="star" type="radio" value="5" className="radio-btn hide" />
@@ -55,9 +55,9 @@ class AddBeer extends React.Component {
                                 <label className="starButtons" for="star1">☆</label>
                                 <div className="clear"></div>
                             </div>
-                        </div>
-                        <textarea className="addBreweryInputLong" type="text" name="Comment" placeholder="Komentarz"></textarea>
-                        <br></br>
+                        </div> */}
+                       {/*  <textarea className="addBreweryInputLong" type="text" name="Comment" placeholder="Komentarz"></textarea>
+                        <br></br> */}
                         <textarea className="addBreweryInputLong" type="text" name="beerDesc" placeholder="Opis piwa"></textarea>
                             <div id="checkboxDiv">
                                 <input type="checkbox" name="addBrowarCheckBox" value="checked" />

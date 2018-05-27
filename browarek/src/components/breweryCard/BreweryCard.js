@@ -23,7 +23,7 @@ class BreweryCard extends React.Component {
                             <div className="descVar" id="createDate">1864</div>
                         </div>
                         <div id="imgContainer">
-                            <div id="rateBeerStars">
+                            {/* <div id="rateBeerStars">
                                 <form>
                                     <div className="rating">
                                         <input id="star5" name="star" type="radio" value="5" className="radio-btn hide" />
@@ -39,12 +39,12 @@ class BreweryCard extends React.Component {
                                         <div className="clear"></div>
                                     </div>
                                 </form>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div id="rightSide">
-                        <div id="beerListTitle">Piwa tego browaru</div>
-                        <div id="beerWindow">
+                        <div id="beerListTitleBC">Piwa tego browaru</div>
+                        <div id="beerWindowBC">
                             <ul id="beerList">
                                 <li className="beerRectangle"><a href=""></a>
                                     <div id="beerImgContainer"></div>
