@@ -1,11 +1,27 @@
 import React from 'react';
 import './BrewerySearch.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+
 
 class BrewerySearch extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { error: "" };
+    state = { error: ""}
+
+    onSubmit = (event) => {
+        event.preventDefault();
+        const form = event.target;
+
+        const data = {
+            Name: form.Name.value,
+            ProducerType: form.producerType.value,
+            Country: form.Country.value,
+            DateMin: form.creationDateFromName.value,
+            DateMax: form.creationDateToName.value,
+        }
+
+        axios.post("/brewery/search", data)
+        .then(response => this.setState({results: response.data}))
+        .catch(error => alert(error));
     }
 
     render = () => {
@@ -31,7 +47,7 @@ class BrewerySearch extends React.Component {
                         <select className="comboboxBrewery" name="Country"></select>
                         <div id="creationDateInput">
                         <input name="creationDateFromName" id="creationDateFrom" placeholder="od"/>
-                        <input name="creationDateFromName" id="creationDateTo" placeholder="do"/>
+                        <input name="creationDateToName" id="creationDateTo" placeholder="do"/>
                         </div>
                     </div>
                 </div>
