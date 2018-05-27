@@ -18,27 +18,25 @@ class BrewerySearch extends React.Component {
                     </Link>
                     <button id="beerSwitchBrewery">Browary</button>
                 </div>
-                <input id="searchName" form="searchForm" placeholder="Wpisz nazwe browaru" />
+                <form id="brewerySearchFrom">
+                <input name="Name" id="searchName" form="searchForm" placeholder="Wpisz nazwe browaru" />
                 <div id="twoColumns">
                     <div id="FilterDesc">
-                        <div className="Desc">Filtrowanie</div>
-                        <br></br>
                         <div className="Desc">Typ producenta:</div>
                         <div className="Desc">Kraj:</div>
                         <div className="Desc">Rok założenia:</div>
                     </div>
-                    <form id="searchForm">
-                        <button id="clearFilters">Wyczyść filtry</button>
-                        <br></br>
+                    <div id="searchForm">
                         <select className="comboboxBrewery" name="producerType"></select>
                         <select className="comboboxBrewery" name="Country"></select>
                         <div id="creationDateInput">
-                        <input id="creationDateFrom" placeholder="od"/>
-                        <input id="creationDateTo" placeholder="do"/>
+                        <input name="creationDateFromName" id="creationDateFrom" placeholder="od"/>
+                        <input name="creationDateFromName" id="creationDateTo" placeholder="do"/>
                         </div>
-                    </form>
+                    </div>
                 </div>
-                <input id="searchButton" form="searchForm" type="submit" value="Wyszukaj" />
+                <input name="searchButtonName" id="searchButton" form="searchForm" type="submit" value="Wyszukaj" />
+                </form>
             </div>
         );
     }
