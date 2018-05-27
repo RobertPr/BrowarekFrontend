@@ -41,7 +41,8 @@
 .navbarButton{
 	display:flex;
 	background-color: #FFFDE5;
-	width:28%;
+	padding-left: 15px;
+	padding-right: 15px;
 	height: 50%;
 	border-top-right-radius: 15px;
 	border-top-left-radius: 15px;
@@ -110,7 +111,8 @@
   	border-bottom-left-radius: 6px;
 		margin-top: 30px;
 		margin-bottom: 30px;
-    padding: 5px 60px;
+    padding: 5px 30px 5px 15px;
 		font-family: Mitr;
-    font-size: 18px;
+		font-size: 18px;
+		white-space: nowrap;
 }

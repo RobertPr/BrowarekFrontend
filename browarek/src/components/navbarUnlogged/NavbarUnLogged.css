@@ -39,8 +39,9 @@
 .navbarButton{
 	display:flex;
 	background-color: #FFFDE5;
-	width:28%;
 	height: 50%;
+	padding-left: 15px;
+	padding-right: 15px;
 	border-top-right-radius: 15px;
 	border-top-left-radius: 15px;
 	align-items: center;
