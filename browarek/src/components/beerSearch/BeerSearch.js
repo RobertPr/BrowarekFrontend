@@ -1,11 +1,29 @@
 import React from 'react';
 import './BeerSearch.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 class BeerSearch extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { error: "" };
+    state = { error: "" }
+
+    onSubmit = (event) => {
+        event.preventDefault();
+        const form = event.target;
+
+        const data = {
+            Name: form.Name.value,
+            Style: form.style.value,
+            AlcoholMin: form.alcoPercentFrom.value,
+            AlcoholMax: form.alcoPercentTo.value,
+            IbuMin: form.gorzkoscFrom.value,
+            IbuMax: form.gorzkoscTo.value,
+            BlgMin: form.blgFrom.value,
+            BlgMax: form.blgTo.value
+        }
+
+        axios.post("/beer/search", data)
+            .then(response => this.setState({results: response.data}))
+            .catch(error => alert(error));
     }
 
     render = () => {
@@ -15,13 +33,12 @@ class BeerSearch extends React.Component {
                 <div id="searchSwitch">
                     <button id="brewerySwitch">Piwa</button>
                     <Link to="/brewerySearch">
-                    <button id="beerSwitch">Browary</button>
+                        <button id="beerSwitch">Browary</button>
                     </Link>
                 </div>
-                <input id="searchName" form="searchForm" placeholder="Wpisz nazwe piwa" />
                 <div id="twoColumns">
                     <div id="FilterDesc">
-                        <div className="Desc">Filtrowanie</div>
+                        <div className="Desc">Nazwa:</div>
                         <br></br>
                         <div className="Desc">Styl:</div>
                         {/* <div id="Desc">Kraj:</div>
@@ -33,23 +50,23 @@ class BeerSearch extends React.Component {
                         <div className="Desc">Ekstrakt w °Blg:</div>
                     </div>
                     <form id="searchForm">
-                        <button id="clearFilters">Wyczyść filtry</button>
+                    <input name="Name"/>
                         <br></br>
                         <select className="combobox" name="style"></select>
                         {/* <select className="combobox" name="Country"></select>
                         <select className="combobox" name="Producer"></select>
                          <select className="combobox" name="producerType"></select> */}
                         <div id="alcoPercentInput" className="ToFromContainer">
-                        <input id="alcoPercentFrom" className="ToFrom" placeholder="od"/>
-                        <input id="alcoPercentTo" className="ToFrom" placeholder="do"/>
+                            <input name="alcoPercentFrom" className="ToFrom" placeholder="od" />
+                            <input name="alcoPercentTo" className="ToFrom" placeholder="do" />
                         </div>
                         <div id="gorzkoscInput" className="ToFromContainer">
-                        <input id="gorzkoscFrom" className="ToFrom" placeholder="od"/>
-                        <input id="gorzkoscTo" className="ToFrom" placeholder="do"/>
+                            <input name="gorzkoscFrom" className="ToFrom" placeholder="od" />
+                            <input name="gorzkoscTo" className="ToFrom" placeholder="do" />
                         </div>
                         <div id="blgInput" className="ToFromContainer">
-                        <input id="blgFrom" className="ToFrom" placeholder="od"/>
-                        <input id="blgTo" className="ToFrom" placeholder="do"/>
+                            <input name="blgFrom" className="ToFrom" placeholder="od" />
+                            <input name="blgTo" className="ToFrom" placeholder="do" />
                         </div>
                     </form>
                 </div>
