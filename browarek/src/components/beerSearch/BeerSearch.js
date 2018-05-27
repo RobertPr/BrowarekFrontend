@@ -13,8 +13,10 @@ class BeerSearch extends React.Component {
             <div id="searchContainer">
                 <div id="searchLogo">Wyszukaj:</div>
                 <div id="searchSwitch">
-                    <button id="beerSwitch">Piwa</button>
-                    <button id="brewerySwitch">Browary</button>
+                    <button id="brewerySwitch">Piwa</button>
+                    <Link to="/brewerySearch">
+                    <button id="beerSwitch">Browary</button>
+                    </Link>
                 </div>
                 <input id="searchName" form="searchForm" placeholder="Wpisz nazwe piwa" />
                 <div id="twoColumns">

@@ -213,7 +213,7 @@ label{
 	right: 100px;
 }
 
-#addBreweryPhoto{ 
+.addBreweryPhoto{ 
 	align-self: flex-end;
 	border-radius: 5px;
 	margin-top: 430px;
