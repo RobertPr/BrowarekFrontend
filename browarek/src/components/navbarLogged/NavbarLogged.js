@@ -11,15 +11,15 @@ class NavbarLogged extends React.Component {
     render = () => {
         return (
             <div id="navbarLogged">
-                <div class="fas fa-beer"></div>
+                <div className="fas fa-beer"></div>
                 <div id="logoText">Browarek</div>
                 <div id="navbarButtonsContainer">
-                    <div class="navbarButton">
-                        <span class="fas fa-search"></span>
+                    <div className="navbarButton">
+                        <span className="fas fa-search"></span>
                         <span id="navbarButtonText">Wyszukiwarka</span>
                     </div>
-                    <div class="navbarButton">
-                        <span class="fas fa-plus-square"></span>
+                    <div className="navbarButton">
+                        <span className="fas fa-plus-square"></span>
                         <span id="navbarButtonText">Dodaj</span>
                     </div>
                 </div>

@@ -11,19 +11,19 @@ class NavbarUnLogged extends React.Component {
     render = () => {
         return (
             <div id="navbarUnlogged">
-                <div class="fas fa-beer"></div>
+                <div className="fas fa-beer"></div>
                 <div id="logoText">Browarek</div>
                 <div id="navbarButtonsContainer">
-                    <div class="navbarButton">
-                        <span class="fas fa-sign-in-alt"></span>
+                    <div className="navbarButton">
+                        <span className="fas fa-sign-in-alt"></span>
                         <span id="loginButtonText">Logowanie</span>
                     </div>
-                    <div class="navbarButton">
-                        <span class="fas fa-user-plus"></span>
+                    <div className="navbarButton">
+                        <span className="fas fa-user-plus"></span>
                         <span id="loginButtonText">Rejestracja</span>
                     </div>
-                    <div class="navbarButton">
-                        <span class="fas fa-search"></span>
+                    <div className="navbarButton">
+                        <span className="fas fa-search"></span>
                         <span id="loginButtonText">Wyszukiwarka</span>
                     </div>
                 </div>

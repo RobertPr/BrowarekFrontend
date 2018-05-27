@@ -33,14 +33,14 @@ class BeerSearch extends React.Component {
                     <form id="searchForm">
                         <button id="clearFilters">Wyczyść filtry</button>
                         <br></br>
-                        <select class="combobox" name="style"></select>
-                        <select class="combobox" name="Country"></select>
-                        <select class="combobox" name="Producer"></select>
-                        <select class="combobox" name="producerType"></select>
-                        <input class="rangeSlider" type="range" multiple value="10,80" />
-                        <input class="rangeSlider" type="range" multiple value="10,80" />
-                        <input id="range3" class="rangeSlider" type="range" multiple value="10,80" />
-                        <input class="rangeSlider" type="range" multiple value="10,80" />
+                        <select className="combobox" name="style"></select>
+                        <select className="combobox" name="Country"></select>
+                        <select className="combobox" name="Producer"></select>
+                        <select className="combobox" name="producerType"></select>
+                        <input className="rangeSlider" type="range" multiple value="10,80" />
+                        <input className="rangeSlider" type="range" multiple value="10,80" />
+                        <input id="range3" className="rangeSlider" type="range" multiple value="10,80" />
+                        <input className="rangeSlider" type="range" multiple value="10,80" />
                     </form>
                 </div>
                 <input id="searchButton" form="searchForm" type="submit" value="Wyszukaj" />

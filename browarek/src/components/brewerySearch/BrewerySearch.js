@@ -28,9 +28,9 @@ class BrewerySearch extends React.Component {
                     <form id="searchForm">
                         <button id="clearFilters">Wyczyść filtry</button>
                         <br></br>
-                        <select class="comboboxBrewery" name="producerType"></select>
-                        <select class="comboboxBrewery" name="Country"></select>
-                        <input id="rangeSliderBrewery" class="rangeSlider" type="range" multiple value="10,80" />
+                        <select className="comboboxBrewery" name="producerType"></select>
+                        <select className="comboboxBrewery" name="Country"></select>
+                        <input id="rangeSliderBrewery" className="rangeSlider" type="range" multiple value="10,80" />
                     </form>
                 </div>
                 <input id="searchButton" form="searchForm" type="submit" value="Wyszukaj" />

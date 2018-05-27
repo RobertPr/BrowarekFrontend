@@ -15,24 +15,24 @@ class BeerResults extends React.Component {
 				<div id="breweryName">Wyszukane piwa</div>
 				<div id="beerWindow">
 					<ul id="beerList">
-						<li class="beerRectangle"><a href=""></a>
+						<li className="beerRectangle"><a href=""></a>
 							<div id="beerImgContainer"></div>
 							<div id="beerName">Żywiec białe</div>
 						</li>
-						<li class="beerRectangle"><a href=""></a>
+						<li className="beerRectangle"><a href=""></a>
 							<div id="beerImgContainer"></div>
 							<div id="beerName">Żywiec białe</div>
-						</li><li class="beerRectangle"><a href=""></a>
+						</li><li className="beerRectangle"><a href=""></a>
 							<div id="beerImgContainer"></div>
 							<div id="beerName">Żywiec białe</div>
-						</li><li class="beerRectangle"><a href=""></a>
+						</li><li className="beerRectangle"><a href=""></a>
 							<div id="beerImgContainer"></div>
 							<div id="beerName">Żywiec białe</div>
-						</li><li class="beerRectangle"><a href=""></a>
+						</li><li className="beerRectangle"><a href=""></a>
 							<div id="beerImgContainer"></div>
 							<div id="beerName">Żywiec białe</div>
 						</li>
-						<li class="beerRectangle"><a href=""></a>
+						<li className="beerRectangle"><a href=""></a>
 							<div id="beerImgContainer"></div>
 							<div id="beerName">Żywiec białe</div>
 						</li>
