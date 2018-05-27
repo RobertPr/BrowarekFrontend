@@ -2,5 +2,9 @@ body {
   margin: 0;
   padding: 0;
   background-color: #C7A58B;
-	font-family: lato;
+  font-family: lato;
+}
+
+a {
+text-decoration: none
 }
