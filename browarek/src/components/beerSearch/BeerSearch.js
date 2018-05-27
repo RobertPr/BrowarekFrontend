@@ -1,7 +1,8 @@
 import React from 'react';
 import './BeerSearch.css';
-import { Link } from 'react-router-dom';
+import { Link, Redirect, withRouter } from 'react-router-dom';
 import axios from 'axios';
+import BeerResults from '../beerResults/BeerResults';
 
 class BeerSearch extends React.Component {
     state = { error: "" }
@@ -22,8 +23,11 @@ class BeerSearch extends React.Component {
         }
 
         axios.post("/beer/search", data)
-            .then(response => this.setState({results: response.data}))
-            .catch(error => alert(error));
+            .then(response => { 
+                this.props.setSearchResults(response.data);
+                this.props.history.push("/beerResults");
+            })
+            .catch (error => alert(error));
     }
 
     render = () => {
@@ -49,8 +53,8 @@ class BeerSearch extends React.Component {
                         {/* <div className="Desc">Ocena użytkowników:</div> */}
                         <div className="Desc">Ekstrakt w °Blg:</div>
                     </div>
-                    <form id="searchForm">
-                    <input name="Name"/>
+                    <form id="searchForm" onSubmit={this.onSubmit}>
+                        <input name="Name" />
                         <br></br>
                         <select className="combobox" name="style"></select>
                         {/* <select className="combobox" name="Country"></select>
@@ -76,4 +80,4 @@ class BeerSearch extends React.Component {
     }
 }
 
-export default BeerSearch;
+export default withRouter(BeerSearch);

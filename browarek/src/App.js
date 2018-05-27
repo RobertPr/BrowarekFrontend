@@ -26,6 +26,10 @@ class App extends Component {
     this.setState({ token: undefined, userId: undefined });
     delete axios.defaults.headers.common['Authorization'];
   }
+  setSearchResults = results => {
+    this.setState({results});
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -38,7 +42,8 @@ class App extends Component {
           <Route exact path="/addBrewery" component={AddBrewery} />
           <Route exact path="/breweryCard/:breweryId" component={BreweryCard} /> 
           <Route exact path="/beerCard/:beerId" component={BeerCard} /> {/* zmienic zeby bylo id piwa */}
-          <Route exact path="/beerSearch" component={BeerSearch} />
+          <Route exact path="/beerSearch" render={() => <BeerSearch setSearchResults={this.setSearchResults}/>} />
+          <Route exact path="/beerResults" render={() => <BeerResults results={this.state.results} />} />
           <Route exact path="/brewerySearch" component={BrewerySearch} />
           <Route exact path="/nav" component={NavbarLogged} /> {/* test only */}
           <Route exact path="/navun" component={NavbarUnLogged} /> {/* test only */}

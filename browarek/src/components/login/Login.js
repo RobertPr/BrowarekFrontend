@@ -32,8 +32,8 @@ class Login extends React.Component {
                 <h1 id="logowanie">Logowanie</h1>
             </div>
             <form id="loginForm" onSubmit={this.handleSubmit}>
-                <input name="email" className="form" type="Email" placeholder="E-mail" />
-                <input name="password" className="form" type="Password" placeholder="Hasło" />
+                <input name="email" className="form" type="Email" placeholder="E-mail" required/>
+                <input name="password" className="form" type="Password" placeholder="Hasło" required/>
                 <input id="loginButton" type="submit" value="Zaloguj" />
             </form>
             </React.Fragment>

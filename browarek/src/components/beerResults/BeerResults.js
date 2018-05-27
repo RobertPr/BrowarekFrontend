@@ -1,12 +1,26 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import './BeerResults.css';
-import NavbarLogged from '../navbarLogged/NavbarLogged';
+import base64ToImageUrl from '../../services/base64ToImageUrl';
 
 class BeerResults extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {};
+	state = { results: [] }
+
+	componentDidMount = () => {
+		if (this.props.results) {
+			this.replaceImages(this.props.results);
+		}
+	}
+	componentDidUpdate = (prevProps, prevState) => {
+		if (prevProps.results != this.props.results) {
+			this.replaceImages(this.props.results);
+		}
+	}
+	replaceImages = (beers) => {
+		for (let beer of beers) {
+			beer.image = base64ToImageUrl(beer.image);
+		}
+		this.setState({ results: beers });
 	}
 
 	render = () => {
@@ -15,27 +29,11 @@ class BeerResults extends React.Component {
 				<div id="breweryName">Wyszukane piwa</div>
 				<div id="beerWindow">
 					<ul id="beerList">
-						<li className="beerRectangle"><a href=""></a>
-							<div className="beerImgContainer"></div>
-							<div className="beerName">Żywiec białe</div>
-						</li>
-						<li className="beerRectangle"><a href=""></a>
-							<div className="beerImgContainer"></div>
-							<div className="beerName">Żywiec białe</div>
-						</li><li className="beerRectangle"><a href=""></a>
-							<div className="beerImgContainer"></div>
-							<div className="beerName">Żywiec białe</div>
-						</li><li className="beerRectangle"><a href=""></a>
-							<div className="beerImgContainer"></div>
-							<div className="beerName">Żywiec białe</div>
-						</li><li className="beerRectangle"><a href=""></a>
-							<div className="beerImgContainer"></div>
-							<div className="beerName">Żywiec białe</div>
-						</li>
-						<li className="beerRectangle"><a href=""></a>
-							<div className="beerImgContainer"></div>
-							<div className="beerName">Żywiec białe</div>
-						</li>
+						{this.state.results.map(beer =>
+							<Link key={beer.id} to={`/beerCard/${beer.id}`} className="beerRectangleMS">
+								<div className="beerImgContainerMS" style={{ backgroundImage: `url(${beer.image})` }}></div>
+								<div className="beerNameMS">{beer.name}</div>
+							</Link>)}
 					</ul>
 				</div>
 			</div>
